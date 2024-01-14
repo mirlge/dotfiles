@@ -1,0 +1,19 @@
+theme = "rose_pine"
+
+[editor]
+true-color = true
+color-modes = true
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.indent-guides]
+render = true
+
+[editor.soft-wrap]
+enable = true
