@@ -76,7 +76,7 @@ source <(pkgx --shellcode)  #docs.tea.xyz/shellcode
 
 [ -f "/Users/mirge/.ghcup/env" ] && source "/Users/mirge/.ghcup/env" # ghcup-env
 
-source <(sunbeam completion zsh)
+command -v sunbeam &> /dev/null && source <(sunbeam completion zsh)
 
 eval "$(luarocks path --bin)"
 
