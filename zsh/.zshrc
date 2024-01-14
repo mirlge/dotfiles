@@ -56,7 +56,7 @@ export FZF_DEFAULT_OPTS="
   --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 
 # deno completions
-eval "$(deno completions zsh)"
+command -v deno &> /dev/null && eval "$(deno completions zsh)"
 
 # zellij completions + more
 eval "$(zellij setup --generate-completion zsh)"
