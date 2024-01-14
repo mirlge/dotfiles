@@ -1,4 +1,4 @@
-source ~/.profile
+[ -f "$HOME/.profile" ] && source "$HOME/.profile"
 
 # Setting PATH for Python 3.9
 # The original version is saved in .zprofile.pysave
@@ -16,7 +16,11 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:${PATH}"
 export PATH
 
 # local binaries and Homebrew sbin
-export PATH="$(brew --prefix)/sbin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+if command -v brew &> /dev/null
+then
+  export PATH="$(brew --prefix)/sbin:$PATH"
+fi
 
 # JavaFX
 export PATH_TO_FX=$HOME/javafx-sdk-*/lib
@@ -29,8 +33,11 @@ export PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 
 # java
-export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH="$JAVA_HOME:$PATH"
+if [ -f /usr/libexec/java_home ]
+then
+  export JAVA_HOME=$(/usr/libexec/java_home)
+  export PATH="$JAVA_HOME:$PATH"
+fi
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"

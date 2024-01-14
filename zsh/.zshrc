@@ -35,12 +35,15 @@ export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 eval "$(starship init zsh)"
 
 # zsh-xt
-. $HOME/.zsh-xt/load.zsh
-zsh-xt color
-zsh-xt ls
-zsh-xt lsd
-zsh-xt nvim
-zsh-xt git
+if [ -f "$HOME/.zsh-xt/load.zsh" ]
+then
+  . "$HOME/.zsh-xt/load.zsh"
+  zsh-xt color
+  zsh-xt ls
+  zsh-xt lsd
+  zsh-xt nvim
+  zsh-xt git
+fi
 
 # manpager, editor, etc.
 export MANPAGER="nvim +Man!"
