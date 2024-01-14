@@ -72,7 +72,7 @@ alias hx="PATH=\"$HOME/.local/share/nvim/mason/bin:$PATH\" hx"
 
 source <(pkgx --shellcode)  #docs.tea.xyz/shellcode
 
-source "$HOME/.pkgxd"
+[ -f "$HOME/.pkgxd" ] && source "$HOME/.pkgxd"
 
 [ -f "/Users/mirge/.ghcup/env" ] && source "/Users/mirge/.ghcup/env" # ghcup-env
 
