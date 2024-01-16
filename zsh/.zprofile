@@ -56,4 +56,5 @@ export HOMEBREW_NO_ANALYTICS=1
 export DENO_INSTALL="/Users/mirge/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-# vim ft=zsh
+export QT_QPA_PLATFORMTHEME=qt5ct
+export GTK_THEME=Colloid-Dark
