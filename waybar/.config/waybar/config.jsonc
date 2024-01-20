@@ -10,14 +10,14 @@
     "hyprland/window" /*, "cava"*/
   ],
   "modules-right": [
-    "custom/notifications",
+    "tray",
     "pulseaudio",
     "cpu",
     "memory",
     "temperature",
     "battery",
     "clock",
-    "tray"
+    "custom/notifications"
   ],
   // Modules configuration
   "hyprland/workspaces": {
