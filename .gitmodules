@@ -1,3 +1,3 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
-	url = https://codeberg.org:mirge/nvim-cfg.git
+	url = https://codeberg.org/mirge/nvim-cfg.git
