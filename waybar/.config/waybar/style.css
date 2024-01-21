@@ -6,14 +6,18 @@
   font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
   font-size: 13px;
   color: @text;
+  min-height: 0;
 }
 
 box.horizontal,
 window#waybar {
   background: transparent;
-  margin-right: 2.5px;
-  margin-left: 2.5px;
-  margin-top: 2.5px;
+  margin: 2.5px;
+  border-radius: 0;
+}
+
+window#waybar {
+  background-color: alpha(@text, 0.1);
 }
 
 tooltip {
@@ -34,7 +38,6 @@ menu {
 
 #workspaces,
 #window,
-#tray,
 #pulseaudio,
 #memory,
 #cpu,
@@ -44,11 +47,10 @@ menu {
 #custom-notifications {
   background-color: @surface;
   border-radius: 10px;
-  margin: 2.5px;
+  margin: 1px;
 }
 
 #window,
-#tray,
 #pulseaudio,
 #memory,
 #cpu,
@@ -56,9 +58,7 @@ menu {
 #battery,
 #clock,
 #custom-notifications {
-  padding-right: 10px;
-  padding-left: 10px;
-  opacity: 0.8;
+  padding: 0 10px;
 }
 
 
@@ -98,14 +98,14 @@ menu {
 }
 
 
-#workspaces {
-  opacity: 0.8;
-}
-
 #workspaces button.active {
   box-shadow: inset 0 -2px @text;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+#workspaces {
+  padding: 0 4px;
 }
 
 #workspaces button:hover {
