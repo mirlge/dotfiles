@@ -58,3 +58,5 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 export GTK_THEME=Colloid-Dark
+
+command -v go &> /dev/null && export PATH="$(go env GOPATH)/bin:$PATH"
