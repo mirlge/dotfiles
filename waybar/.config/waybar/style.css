@@ -90,7 +90,8 @@ menu {
   }
 }
 
-#battery.warning:not(.charging) {
+#battery.warning:not(.charging),
+#battery.critical:not(.charging) {
   color: @love;
   animation-name: blink;
   animation-duration: 0.5s;
