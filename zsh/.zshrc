@@ -83,4 +83,4 @@ command -v sunbeam &> /dev/null && source <(sunbeam completion zsh)
 
 eval "$(luarocks path --bin)"
 
-#fastfetch
+pfetch
