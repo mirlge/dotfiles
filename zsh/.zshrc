@@ -1,10 +1,13 @@
 # Created by Zap installer
-[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
-plug "zsh-users/zsh-autosuggestions"
-plug "zap-zsh/supercharge"
-plug "zsh-users/zsh-syntax-highlighting"
-plug "zsh-users/zsh-completions"
-plug "zsh-users/zsh-apple-touchbar"
+if [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ]
+then
+  source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+  plug "zsh-users/zsh-autosuggestions"
+  plug "zap-zsh/supercharge"
+  plug "zsh-users/zsh-syntax-highlighting"
+  plug "zsh-users/zsh-completions"
+  plug "zsh-users/zsh-apple-touchbar"
+fi
 
 bindkey -v
 
@@ -32,12 +35,12 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # starship
-eval "$(starship init zsh)"
+command -v starship &> /dev/null && eval "$(starship init zsh)"
 
 # zsh-xt
-if [ -f "$HOME/.zsh-xt/load.zsh" ]
+if [ -d "$HOME/.zsh-xt" ]
 then
-  . "$HOME/.zsh-xt/load.zsh"
+  source "$HOME/.zsh-xt/load.zsh"
   zsh-xt color
   zsh-xt ls
   zsh-xt lsd
@@ -46,9 +49,12 @@ then
 fi
 
 # manpager, editor, etc.
-export MANPAGER="nvim +Man!"
-export VISUAL="nvim"
-export EDITOR="nvim"
+if command -v nvim &> /dev/null
+then
+  export MANPAGER="nvim +Man!"
+  export VISUAL="nvim"
+  export EDITOR="nvim"
+fi
 
 # fzf Rosé Pine
 export FZF_DEFAULT_OPTS="
@@ -62,7 +68,7 @@ export FZF_DEFAULT_OPTS="
 command -v deno &> /dev/null && eval "$(deno completions zsh)"
 
 # zellij completions + more
-eval "$(zellij setup --generate-completion zsh)"
+command -v zellij &> /dev/null && eval "$(zellij setup --generate-completion zsh)"
 
 # gpg signing fix
 export GPG_TTY=$TTY
@@ -73,7 +79,7 @@ alias nvim-nightly="$HOME/.nvim/versions/nightly/bin/nvim"
 
 alias hx="PATH=\"$HOME/.local/share/nvim/mason/bin:$PATH\" hx"
 
-source <(pkgx --shellcode)  #docs.tea.xyz/shellcode
+command -v pkgx &> /dev/null && source <(pkgx --shellcode)  #docs.tea.xyz/shellcode
 
 [ -f "$HOME/.pkgxd" ] && source "$HOME/.pkgxd"
 
@@ -81,6 +87,6 @@ source <(pkgx --shellcode)  #docs.tea.xyz/shellcode
 
 command -v sunbeam &> /dev/null && source <(sunbeam completion zsh)
 
-eval "$(luarocks path --bin)"
+command -v luarocks &> /dev/null && eval "$(luarocks path --bin)"
 
-pfetch
+command -v pfetch &> /dev/null && pfetch
