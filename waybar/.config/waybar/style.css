@@ -19,7 +19,7 @@ window#waybar {
 }
 
 window#waybar {
-  background-color: alpha(@text, 0.1);
+  background-color: alpha(@text, 0.2);
 }
 
 tooltip {
