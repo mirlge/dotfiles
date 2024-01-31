@@ -46,6 +46,7 @@ menu {
 #temperature,
 #battery,
 #clock,
+#keyboard-state,
 #custom-notifications {
   background-color: @surface;
   border-radius: 10px;
@@ -59,6 +60,7 @@ menu {
 #temperature,
 #battery,
 #clock,
+#keyboard-state,
 #custom-notifications {
   padding: 0 10px;
 }
