@@ -2,7 +2,7 @@
 
 * {
   border: none;
-  border-radius: 10px;
+  border-radius: 0px;
   font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
   font-size: 13px;
   color: @text;
@@ -23,18 +23,27 @@ window#waybar {
 }
 
 tooltip {
+  border-radius: 10px;
   background-color: @surface;
 }
 
 *:hover {
+  border-radius: 10px;
   background-color: @overlay;
 }
 
-button {
+menuitem {
+  border-radius: 10px;
+}
+
+button,
+decoration {
+  border-radius: 10px;
   background-color: @surface;
 }
 
 menu {
+  border-radius: 10px;
   background-color: @surface;
 }
 
