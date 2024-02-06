@@ -119,22 +119,26 @@ menu {
 }
 
 
+#workspaces button {
+  background-color: @surface;
+  border-radius: 50px;
+  margin: 0 4px;
+}
+
 #workspaces button.active {
-  box-shadow: inset 0 -2px @text;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  background-color: @overlay;
+  padding: 0 20px;
 }
 
 #workspaces {
-  padding: 0 4px;
+  background-color: inherit;
 }
 
 #workspaces button:hover {
-  border-radius: 0;
+  background-color: @overlay;
 }
 
 #workspaces button.urgent {
-  border-radius: 0;
   background-color: @gold;
   color: @overlay;
 }
