@@ -2,6 +2,6 @@
 
 ## Screenshots
 
-### Hyprland + Waybar
+### Hyprland + Waybar + kitty + tmux + Neovim
 
-![Hyprland](./hyprland.png)
+![Hyprland](./hyprland+waybar+kitty+tmux+nvim.png)
