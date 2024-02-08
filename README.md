@@ -2,6 +2,6 @@
 
 ## Screenshots
 
-### Hyprland
+### Hyprland + Waybar
 
 ![Hyprland](./hyprland.png)
