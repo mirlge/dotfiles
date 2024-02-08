@@ -12,9 +12,11 @@
   "modules-right": [
     "tray",
     "pulseaudio",
+    /*
     "cpu",
     "memory",
     "temperature",
+    */
     "keyboard-state",
     "battery",
     "clock",
