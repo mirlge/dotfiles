@@ -18,10 +18,6 @@ window#waybar {
   border-radius: 0;
 }
 
-window#waybar {
-  background-color: alpha(@text, 0.2);
-}
-
 tooltip {
   border-radius: 10px;
   background-color: @surface;
@@ -56,6 +52,7 @@ menu {
 #battery,
 #clock,
 #keyboard-state,
+#tray,
 #custom-notifications {
   background-color: @surface;
   border-radius: 10px;
@@ -70,8 +67,10 @@ menu {
 #battery,
 #clock,
 #keyboard-state,
+#tray,
 #custom-notifications {
-  padding: 0 10px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 
@@ -126,8 +125,9 @@ menu {
 }
 
 #workspaces button.active {
-  background-color: @overlay;
-  padding: 0 20px;
+  background-color: @pine;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 #workspaces {
