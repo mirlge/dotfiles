@@ -145,3 +145,13 @@ menu {
   background-color: @gold;
   color: @overlay;
 }
+
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @gold;
+}
