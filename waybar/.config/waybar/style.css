@@ -7,13 +7,13 @@
   font-size: 13px;
   font-weight: normal;
   color: @text;
-  min-height: 0;
 }
 
 box.horizontal,
 window#waybar {
   background: transparent;
   margin: 2.5px;
+  min-height: 0;
 }
 
 tooltip {
@@ -55,6 +55,7 @@ menu {
   background-color: @surface;
   border-radius: 10px;
   margin: 1px;
+  min-height: 0;
 }
 
 #window,
@@ -122,7 +123,8 @@ menu {
   padding-top: 0;
   padding-bottom: 0;
   margin: 4px 2px;
-  transition: padding .1s, background-color .5s
+  transition: padding .1s, background-color .5s;
+  min-height: 0;
 }
 
 #workspaces button.active {
