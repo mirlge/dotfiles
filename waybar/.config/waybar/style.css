@@ -117,23 +117,26 @@ menu {
 
 
 #workspaces button {
-  background-color: @surface;
-  border-radius: 50px;
-  margin: 0 4px;
+  background-color: @overlay;
+  border-radius: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 4px 2px;
+  transition: padding .1s, background-color .5s
 }
 
 #workspaces button.active {
-  background-color: @pine;
+  /*background-color: @pine;*/
   padding-right: 20px;
   padding-left: 20px;
 }
 
 #workspaces {
-  background-color: inherit;
+  background-color: @surface;
 }
 
 #workspaces button:hover {
-  background-color: @overlay;
+  background-color: @muted;
 }
 
 #workspaces button.urgent {
