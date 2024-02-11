@@ -16,7 +16,6 @@ box.horizontal,
 window#waybar {
   background: transparent;
   margin: 2.5px;
-  border-radius: 0;
 }
 
 tooltip {
