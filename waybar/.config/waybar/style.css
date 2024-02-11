@@ -5,6 +5,7 @@
   border-radius: 0px;
   font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
   font-size: 13px;
+  font-weight: normal;
   color: @text;
   min-height: 0;
   transition-property: background-color;
