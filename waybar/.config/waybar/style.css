@@ -8,8 +8,6 @@
   font-weight: normal;
   color: @text;
   min-height: 0;
-  transition-property: background-color;
-  transition-duration: .5s;
 }
 
 box.horizontal,
