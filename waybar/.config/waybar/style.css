@@ -13,7 +13,6 @@ box.horizontal,
 window#waybar {
   background: transparent;
   margin: 2.5px;
-  min-height: 0;
 }
 
 tooltip {
@@ -55,7 +54,6 @@ menu {
   background-color: @surface;
   border-radius: 10px;
   margin: 1px;
-  min-height: 0;
 }
 
 #window,
