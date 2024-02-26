@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 setxkbmap se
 /usr/lib/polkit-kde-authentication-agent-1 &
+hypridle &
 hyprpaper &
 waybar &
 swaync &
