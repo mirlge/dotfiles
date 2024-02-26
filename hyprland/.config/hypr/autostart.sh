@@ -9,6 +9,4 @@ udiskie -t &
 avizo-service &
 hyprpm reload -n
 ulauncher --no-window-shadow --hide-window --dev &
-#xwaylandvideobridge &
-#firefox &
 dex -a &
