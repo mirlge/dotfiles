@@ -117,7 +117,7 @@ menu {
 
 #workspaces button {
   background-color: @overlay;
-  border-radius: 10px;
+  border-radius: 7.5px;
   padding-top: 0;
   padding-bottom: 0;
   margin: 4px 2px;
@@ -133,6 +133,8 @@ menu {
 
 #workspaces {
   background-color: @surface;
+  padding-right: 2px;
+  padding-left: 2px;
 }
 
 #workspaces button:hover {
