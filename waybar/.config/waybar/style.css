@@ -15,6 +15,10 @@ window#waybar {
   margin: 2.5px;
 }
 
+window#waybar {
+  background: @base;
+}
+
 tooltip {
   border-radius: 10px;
   background-color: @surface;
