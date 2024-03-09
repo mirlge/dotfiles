@@ -56,7 +56,6 @@ menu {
 #keyboard-state,
 #tray,
 #custom-notifications {
-  background-color: @surface;
   border-radius: 10px;
   margin: 1px;
   margin-bottom: 2.5px;
@@ -72,6 +71,7 @@ menu {
 #keyboard-state,
 #tray,
 #custom-notifications {
+  background-color: @overlay;
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -154,10 +154,10 @@ menu {
 
 
 #tray > .passive {
-    -gtk-icon-effect: dim;
+  -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: @gold;
+  -gtk-icon-effect: highlight;
+  background-color: @gold;
 }
