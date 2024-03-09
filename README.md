@@ -4,4 +4,4 @@
 
 ### Hyprland + Waybar + WezTerm + tmux + Neovim
 
-![Hyprland + Waybar + WezTerm + tmux + Neovim](./hyprland+waybar+WezTerm+tmux+nvim.png)
+![Hyprland + Waybar + WezTerm + tmux + Neovim](./hyprland+waybar+wezterm+tmux+nvim.png)
