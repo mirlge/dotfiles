@@ -8,5 +8,6 @@ swaync &
 udiskie -t &
 avizo-service &
 hyprpm reload -n
+batsignal &
 ulauncher --no-window-shadow --hide-window --dev &
 dex -a &
