@@ -17,7 +17,7 @@ window#waybar {
 
 window#waybar {
   background: @base;
-  border-bottom: 3px solid @overlay;
+  border-radius: 12px;
 }
 
 tooltip {
@@ -58,7 +58,6 @@ menu {
 #custom-notifications {
   border-radius: 10px;
   margin: 1px;
-  margin-bottom: 2.5px;
 }
 
 #window,
@@ -132,7 +131,6 @@ menu {
 }
 
 #workspaces button.active {
-  /*background-color: @pine;*/
   padding-right: 20px;
   padding-left: 20px;
 }
