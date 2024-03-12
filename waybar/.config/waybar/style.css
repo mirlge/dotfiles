@@ -136,9 +136,9 @@ menu {
 }
 
 #workspaces {
-  background-color: @surface;
   padding-right: 2px;
   padding-left: 2px;
+  box-shadow: inset 1px 1px @overlay, inset -1px -1px @overlay, inset -1px 1px @overlay, inset 1px -1px @overlay;
 }
 
 #workspaces button:hover {
