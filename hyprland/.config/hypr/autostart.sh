@@ -5,7 +5,7 @@ hypridle &
 hyprpaper &
 waybar &
 swaync &
-udiskie -t &
+udiskie -t --appindicator &
 avizo-service &
 hyprpm reload -n
 batsignal &
