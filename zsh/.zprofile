@@ -69,3 +69,11 @@ export DENO_INSTALL="$HOME/.deno"
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 command -v go &> /dev/null && export PATH="$(go env GOPATH)/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
