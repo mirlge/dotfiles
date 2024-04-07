@@ -13,6 +13,7 @@
   "modules-right": [
     "tray",
     "pulseaudio",
+    "mpris",
     /*
     "cpu",
     "memory",
@@ -217,5 +218,14 @@
     "restart-interval": 1,
     "tooltip": false,
     "on-click": "sleep 0.1; swaync-client -t &"
+  },
+  "mpris": {
+    "format": "{player}  {status_icon}",
+    "tooltip-format": "{dynamic}",
+    "status-icons": {
+      "playing": "",
+      "paused": "",
+      "stopped": ""
+    }
   }
 }
