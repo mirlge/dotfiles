@@ -8,7 +8,7 @@
   "reload_style_on_change": true,
   // Choose the order of the modules
   "modules-left": [
-    "hyprland/workspaces" /*, "cava"*/
+    "hyprland/workspaces"
   ],
   "modules-right": [
     "tray",
