@@ -6,7 +6,6 @@ then
   plug "zap-zsh/supercharge"
   plug "zsh-users/zsh-syntax-highlighting"
   plug "zsh-users/zsh-completions"
-  plug "zsh-users/zsh-apple-touchbar"
 fi
 
 bindkey -v
