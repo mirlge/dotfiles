@@ -57,6 +57,7 @@ menu {
 #keyboard-state,
 #tray,
 #mpris,
+#privacy,
 #custom-notifications {
   border-radius: 10px;
   margin: 1px;
@@ -72,6 +73,7 @@ menu {
 #keyboard-state,
 #tray,
 #mpris,
+#privacy,
 #custom-notifications {
   background-color: @overlay;
   padding-right: 10px;

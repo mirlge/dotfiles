@@ -19,6 +19,7 @@
     "memory",
     "temperature",
     */
+    "privacy",
     "keyboard-state",
     "battery",
     "clock",
