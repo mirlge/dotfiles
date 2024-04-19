@@ -4,30 +4,28 @@
   border: none;
   border-radius: 0px;
   font-family: FontAwesome, Cantarell, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: normal;
   color: @text;
 }
 
-box.horizontal,
+box.horizontal > window#waybar,
 window#waybar {
   background: transparent;
   margin: 2.5px;
 }
 
 window#waybar {
-  background: @base;
-  border-radius: 12px;
-  border: 1px solid @overlay;
+  background: @surface;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 tooltip {
-  border-radius: 10px;
   background-color: @surface;
 }
 
 *:hover {
-  border-radius: 10px;
   background-color: @overlay;
 }
 
@@ -48,6 +46,7 @@ menu {
 
 #workspaces,
 #window,
+#wireplumber,
 #pulseaudio,
 #memory,
 #cpu,
@@ -59,11 +58,11 @@ menu {
 #mpris,
 #privacy,
 #custom-notifications {
-  border-radius: 10px;
-  margin: 1px;
+  margin: 0 1px;
 }
 
 #window,
+#wireplumber,
 #pulseaudio,
 #memory,
 #cpu,
@@ -75,12 +74,12 @@ menu {
 #mpris,
 #privacy,
 #custom-notifications {
-  background-color: @overlay;
   padding-right: 10px;
   padding-left: 10px;
 }
 
 
+#wireplumber,
 #pulseaudio {
   color: @gold;
 }
@@ -126,24 +125,20 @@ menu {
 
 
 #workspaces button {
-  background-color: @overlay;
-  border-radius: 7.5px;
+  background-color: @base;
+  border-radius: 0;
   padding-top: 0;
   padding-bottom: 0;
-  margin: 4px 2px;
-  transition: padding .1s, background-color .5s;
+  margin: 0;
   min-height: 0;
 }
 
 #workspaces button.active {
-  padding-right: 20px;
-  padding-left: 20px;
+  background-color: @pine;
 }
 
 #workspaces {
   padding-right: 2px;
-  padding-left: 2px;
-  box-shadow: inset 1px 1px @overlay, inset -1px -1px @overlay, inset -1px 1px @overlay, inset 1px -1px @overlay;
 }
 
 #workspaces button:hover {

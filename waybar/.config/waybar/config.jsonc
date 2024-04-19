@@ -12,8 +12,11 @@
   ],
   "modules-right": [
     "tray",
+    "custom/separator",
     "pulseaudio",
+    "custom/separator",
     "mpris",
+    "custom/separator",
     /*
     "cpu",
     "memory",
@@ -21,8 +24,11 @@
     */
     "privacy",
     "keyboard-state",
+    "custom/separator",
     "battery",
+    "custom/separator",
     "clock",
+    "custom/separator",
     "custom/notifications"
   ],
   // Modules configuration
@@ -146,7 +152,7 @@
       "warning": 32,
       "critical": 30
     },
-    "format": "{capacity}% {icon}",
+    "format": "{capacity}% {icon} ",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
     //"format-alt": "{time} {icon}",
@@ -228,5 +234,10 @@
       "paused": "",
       "stopped": ""
     }
+  },
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
   }
 }
