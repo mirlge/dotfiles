@@ -1,5 +1,6 @@
 configuration {
 /*	modes: "window,drun,run,ssh";*/
+	modes: "window,drun,run,ssh,combi";
 /*	font: "mono 12";*/
 	font: "JetBrainsMono Nerd Font Mono 13";
 /*	location: 0;*/
@@ -35,6 +36,7 @@ configuration {
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
 /*	combi-modes: "window,run";*/
+	combi-modes: "run,drun";
 /*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
