@@ -1,5 +1,7 @@
 # MineItRiGrEight's dotfiles
 
+Color scheme: [Rosé Pine](https://rosepinetheme.com/)
+
 ## Screenshots
 
 ### Hyprland + Waybar + WezTerm + tmux + Neovim
