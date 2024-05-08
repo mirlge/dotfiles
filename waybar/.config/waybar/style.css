@@ -3,7 +3,7 @@
 * {
   border: none;
   border-radius: 0px;
-  font-family: FontAwesome, Cantarell, Roboto, Helvetica, Arial, sans-serif;
+  font-family: FontAwesome, JetBrainsMono Nerd Font Mono, Roboto, Helvetica, Arial, sans-serif;
   font-size: 15px;
   font-weight: normal;
   color: @text;

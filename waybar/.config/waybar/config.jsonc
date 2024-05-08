@@ -53,7 +53,7 @@
     "format": "{name} {icon}",
     "format-icons": {
       "locked": "",
-      "unlocked": " "
+      "unlocked": ""
     }
   },
   "hyprland/submap": {
@@ -152,7 +152,7 @@
       "warning": 32,
       "critical": 30
     },
-    "format": "{capacity}% {icon} ",
+    "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
     //"format-alt": "{time} {icon}",
@@ -184,8 +184,8 @@
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
     "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon}  {format_source}",
-    "format-bluetooth-muted": " {icon}  {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
@@ -220,14 +220,14 @@
   */
   "custom/notifications": {
     "exec": "swaync-client -c",
-    "format": "{icon}  {}",
+    "format": "{icon} {}",
     "format-icons": "",
     "restart-interval": 1,
     "tooltip": false,
     "on-click": "sleep 0.1; swaync-client -t &"
   },
   "mpris": {
-    "format": "{player}  {status_icon}",
+    "format": "{player} {status_icon}",
     "tooltip-format": "{dynamic}",
     "status-icons": {
       "playing": "",
