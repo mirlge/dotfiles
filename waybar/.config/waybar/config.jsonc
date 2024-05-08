@@ -23,6 +23,7 @@
     "temperature",
     */
     "privacy",
+    "custom/separator",
     "keyboard-state",
     "custom/separator",
     "battery",
