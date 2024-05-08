@@ -22,6 +22,8 @@
     "memory",
     "temperature",
     */
+    "idle_inhibitor",
+    "custom/separator",
     "privacy",
     "custom/separator",
     "keyboard-state",
