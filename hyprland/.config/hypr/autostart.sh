@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 /usr/lib/polkit-kde-authentication-agent-1 &
 hypridle &
-hyprpaper &
+waypaper --restore &
 waybar &
 swaync &
 udiskie -t --appindicator &
