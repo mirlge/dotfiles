@@ -44,16 +44,12 @@ export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # starship
 command -v starship &> /dev/null && eval "$(starship init zsh)"
 
-# zsh-xt
-if [ -d "$HOME/.zsh-xt" ]
-then
-  source "$HOME/.zsh-xt/load.zsh"
-  zsh-xt color
-  zsh-xt ls
-  zsh-xt lsd
-  zsh-xt nvim
-  zsh-xt git
-fi
+# shell aliases
+shell_aliases_dir="$HOME/.dotfiles/_shell-aliases"
+source "$shell_aliases_dir/color.zsh"
+source "$shell_aliases_dir/ls.zsh"
+source "$shell_aliases_dir/lsd.zsh"
+source "$shell_aliases_dir/git.zsh"
 
 # manpager, editor, etc.
 if command -v nvim &> /dev/null
