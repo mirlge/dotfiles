@@ -46,10 +46,10 @@ command -v starship &> /dev/null && eval "$(starship init zsh)"
 
 # shell aliases
 shell_aliases_dir="$HOME/.dotfiles/_shell-aliases"
-source "$shell_aliases_dir/color.zsh"
-source "$shell_aliases_dir/ls.zsh"
-source "$shell_aliases_dir/lsd.zsh"
-source "$shell_aliases_dir/git.zsh"
+source "$shell_aliases_dir/color.sh"
+source "$shell_aliases_dir/ls.sh"
+source "$shell_aliases_dir/lsd.sh"
+source "$shell_aliases_dir/git.sh"
 
 # manpager, editor, etc.
 if command -v nvim &> /dev/null
