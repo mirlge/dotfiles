@@ -27,18 +27,6 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # iTerm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# antigen start #
-#source $(dirname $0)/antigen.zsh
-
-#antigen bundle zsh-users/zsh-completions
-#antigen bundle zsh-users/zsh-autosuggestions
-#antigen bundle zsh-users/zsh-apple-touchbar
-#antigen bundle zsh-users/zsh-syntax-highlighting
-#antigen bundle zsh-users/zsh-history-substring-search
-
-#antigen apply
-# antigen end #
-
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # starship
