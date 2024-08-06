@@ -55,6 +55,9 @@ export FZF_DEFAULT_OPTS="
   --color=spinner:#f6c177,info:#9ccfd8,separator:#403d52
   --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 
+# set up fzf key bindings and fuzzy completion
+command -v fzf &> /dev/null && source <(fzf --zsh)
+
 # deno completions
 command -v deno &> /dev/null && eval "$(deno completions zsh)"
 
