@@ -3,7 +3,6 @@
   // "position": "bottom", // Waybar position (top|bottom|left|right)
   //"height": 30, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
-  "margin": 3,
   "spacing": 4, // Gaps between modules (4px)
   "reload_style_on_change": true,
   // Choose the order of the modules
@@ -12,21 +11,13 @@
   ],
   "modules-right": [
     "tray",
-    "custom/separator",
     "pulseaudio",
-    "custom/separator",
     "mpris",
-    "custom/separator",
     "idle_inhibitor",
-    "custom/separator",
     "privacy",
-    "custom/separator",
     "keyboard-state",
-    "custom/separator",
     "battery",
-    "custom/separator",
     "clock",
-    "custom/separator",
     "custom/notifications"
   ],
   // Modules configuration
@@ -233,9 +224,4 @@
       "stopped": ""
     }
   },
-  "custom/separator": {
-    "format": "|",
-    "interval": "once",
-    "tooltip": false
-  }
 }
