@@ -17,11 +17,6 @@
     "custom/separator",
     "mpris",
     "custom/separator",
-    /*
-    "cpu",
-    "memory",
-    "temperature",
-    */
     "idle_inhibitor",
     "custom/separator",
     "privacy",
