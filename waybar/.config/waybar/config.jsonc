@@ -200,7 +200,7 @@
         ""
       ]
     },
-    "on-click": "pavucontrol"
+    "on-click": "flatpak run com.saivert.pwvucontrol"
   },
   /*
    "custom/media": {
