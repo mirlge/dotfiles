@@ -1,6 +1,6 @@
-# MineItRiGrEight's dotfiles
+# [Actual repo](https://codeberg.org/mirge/dotfiles)
 
-[Repo](https://codeberg.org/mirge/dotfiles)
+# MineItRiGrEight's dotfiles
 
 Color scheme: [Rosé Pine](https://rosepinetheme.com/)
 
