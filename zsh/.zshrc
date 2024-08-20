@@ -83,4 +83,6 @@ command -v sunbeam &> /dev/null && source <(sunbeam completion zsh)
 
 command -v luarocks &> /dev/null && eval "$(luarocks path --bin)"
 
+command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
+
 command -v pfetch &> /dev/null && pfetch
