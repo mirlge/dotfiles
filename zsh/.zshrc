@@ -85,4 +85,6 @@ command -v luarocks &> /dev/null && eval "$(luarocks path --bin)"
 
 command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
 
+command -v direnv &> /dev/null && eval "$(direnv hook zsh)"
+
 command -v pfetch &> /dev/null && pfetch
