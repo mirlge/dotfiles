@@ -1,0 +1,10 @@
+[Unit]
+Description=Desktop Autostart
+
+[Service]
+ExecStart=dex -a
+Type=forking
+RemainAfterExit=yes
+
+[Install]
+WantedBy=graphical-session.target

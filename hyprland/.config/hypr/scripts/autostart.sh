@@ -9,4 +9,4 @@ avizo-service &
 hyprpm reload -n
 batsignal &
 ulauncher --no-window-shadow --hide-window --dev &
-dex -a &
+systemctl --user start dex-autostart.service &
