@@ -70,6 +70,9 @@ export GPG_TTY=$TTY
 
 export TERM=xterm-256color
 
+# builtin <C-w>
+export WORDCHARS=''
+
 alias nvim-nightly="$HOME/.local/share/bob/nightly/bin/nvim"
 
 alias hx="PATH=\"$HOME/.local/share/nvim/mason/bin:$PATH\" hx"
