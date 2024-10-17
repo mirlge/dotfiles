@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-systemctl --user start hyprpolkitagent.service || ! pidof hyprpolkitagent && /usr/lib/polkit-kde-authentication-agent-1 &
+systemctl --user start hyprpolkitagent.service
 hypridle &
 waypaper --restore &
 waybar &
