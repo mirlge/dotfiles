@@ -5,6 +5,7 @@ waypaper --restore &
 waybar &
 swaync &
 udiskie -t --appindicator &
+swayosd-server &
 avizo-service &
 hyprpm reload -n
 batsignal &
