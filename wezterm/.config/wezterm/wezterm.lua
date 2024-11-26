@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 local theme_plugin = wezterm.plugin.require("https://github.com/neapsix/wezterm")
 config.colors = theme_plugin.main.colors()
 
-config.font_size = 13
+config.font_size = 12
 
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
