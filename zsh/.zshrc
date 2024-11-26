@@ -93,4 +93,6 @@ command -v direnv &> /dev/null && eval "$(direnv hook zsh)"
 
 command -v pypush &> /dev/null && eval "$(pypush --show-completion)"
 
+command -v arduino-cli &> /dev/null && eval "$(arduino-cli completion zsh)"
+
 command -v pfetch &> /dev/null && pfetch
