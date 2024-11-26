@@ -2,6 +2,7 @@
 systemctl --user start hyprpolkitagent.service
 hypridle &
 waypaper --restore &
+wl-paste -t text --watch "$(dirname "$0")/clipman-keepassxc.sh" &
 waybar &
 swaync &
 udiskie -t --appindicator &
