@@ -91,6 +91,6 @@ command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
 
 command -v direnv &> /dev/null && eval "$(direnv hook zsh)"
 
-command -v pfetch &> /dev/null && pfetch
-
 command -v pypush &> /dev/null && eval "$(pypush --show-completion)"
+
+command -v pfetch &> /dev/null && pfetch
