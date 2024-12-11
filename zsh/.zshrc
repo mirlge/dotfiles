@@ -70,6 +70,8 @@ export GPG_TTY=$TTY
 
 export TERM=xterm-256color
 
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+
 # builtin <C-w>
 export WORDCHARS=''
 
