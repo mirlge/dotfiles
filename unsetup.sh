@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-stow -D zsh kitty nvim helix zellij hyprland rofi waybar tmux wezterm ghostty
+stow -D zsh kitty nvim helix zellij hyprland rofi waybar tmux wezterm ghostty meteor
