@@ -12,4 +12,6 @@ selection-background = #403d52
 
 macos-option-as-alt = left
 
+gtk-titlebar = false
+
 keybind = ctrl+alt+w=toggle_tab_overview
