@@ -10,6 +10,5 @@ swayosd-server &
 avizo-service &
 hyprpm reload -n
 batsignal &
-hyprswitch init
 ulauncher --no-window-shadow --hide-window --dev &
 systemctl --user start dex-autostart.service &
