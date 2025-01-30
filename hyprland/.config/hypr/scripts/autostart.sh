@@ -5,9 +5,9 @@ waypaper --restore &
 wl-paste -t text --watch "$(dirname "$0")/clipman-keepassxc.sh" &
 waybar &
 swaync &
-udiskie -t --appindicator &
+uwsm app -- udiskie -t --appindicator &
 swayosd-server &
 avizo-service &
 hyprpm reload -n
-batsignal &
-ulauncher --no-window-shadow --hide-window --dev &
+uwsm app -- batsignal &
+uwsm app -- ulauncher --no-window-shadow --hide-window --dev &
