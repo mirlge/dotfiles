@@ -1,0 +1,2 @@
+source "$HOME/.zprofile"
+source "$HOME/.zshenv"
