@@ -79,7 +79,7 @@ alias nvim-nightly="$HOME/.local/share/bob/nightly/bin/nvim"
 
 alias hx="PATH=\"$HOME/.local/share/nvim/mason/bin:$PATH\" hx"
 
-command -v pkgx &> /dev/null && source <(pkgx --shellcode)  #docs.tea.xyz/shellcode
+command -v pkgx &> /dev/null && eval "$(pkgx dev --shellcode)"  # https://github.com/pkgxdev/dev
 
 [ -f "$HOME/.pkgxd" ] && source "$HOME/.pkgxd"
 
