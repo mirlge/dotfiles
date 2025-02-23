@@ -3,7 +3,7 @@ systemctl --user start hyprpolkitagent.service
 hypridle &
 waypaper --restore &
 wl-paste -t text --watch "$(dirname "$0")/clipman-keepassxc.sh" &
-waybar &
+XDG_DATA_DIRS="${XDG_CONFIG_HOME:-$HOME/.config}/waybar/better_icons:$XDG_DATA_DIRS" waybar &
 swaync &
 uwsm app -- udiskie -t --appindicator &
 swayosd-server &
