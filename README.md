@@ -36,6 +36,6 @@ installed system wide
 
 ## Screenshots
 
-### Hyprland + Waybar + kitty + tmux + Neovim
+### Hyprland + Waybar + Ghostty + tmux + Neovim
 
-![Hyprland + Waybar + WezTerm + tmux + Neovim](./hyprland+waybar+wezterm+tmux+nvim.png)
+![Hyprland + Waybar + Ghostty + tmux + Neovim](./hyprland+waybar+wezterm+tmux+nvim.png)
