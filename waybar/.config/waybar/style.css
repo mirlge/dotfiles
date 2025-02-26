@@ -155,3 +155,7 @@ menu {
   -gtk-icon-effect: highlight;
   background-color: @gold;
 }
+
+#clock {
+  font-size: 8px;
+}

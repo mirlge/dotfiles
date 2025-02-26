@@ -96,10 +96,9 @@
     "spacing": 10
   },
   "clock": {
-    "format": "{:%H:%M:%S}",
+    "format": " {0:%H:%M:%S}\n{0:%Y-%m-%d}",
     "interval": 1,
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
   },
   "cpu": {
     "format": "{usage}% "
