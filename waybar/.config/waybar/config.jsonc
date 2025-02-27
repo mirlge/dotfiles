@@ -57,7 +57,7 @@
     "spacing": 10
   },
   "clock": {
-    "format": "{0:%H:%M:%S} {0:%Y-%m-%d}",
+    "format": "{0:%H:%M:%S}  {0:%Y-%m-%d}",
     "interval": 1,
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
   },
