@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 systemctl --user start hyprpolkitagent.service
-hypridle &
-waypaper --restore &
+uwsm app -- hypridle &
+uwsm app -- waypaper --restore &
 wl-paste -t text --watch "$(dirname "$0")/clipman-keepassxc.sh" &
-XDG_DATA_DIRS="${XDG_CONFIG_HOME:-$HOME/.config}/waybar/better_icons:$XDG_DATA_DIRS" waybar &
-swaync &
+XDG_DATA_DIRS="${XDG_CONFIG_HOME:-$HOME/.config}/waybar/better_icons:$XDG_DATA_DIRS" uwsm app -- waybar &
+uwsm app -- swaync &
 uwsm app -- udiskie -t --appindicator &
-swayosd-server &
-avizo-service &
+uwsm app -- swayosd-server &
+uwsm app -- avizo-service &
 hyprpm reload -n
 uwsm app -- batsignal &
 uwsm app -- ulauncher --no-window-shadow --hide-window --dev &
