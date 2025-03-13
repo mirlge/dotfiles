@@ -78,6 +78,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-if uwsm check may-start && uwsm select; then
+if command -v uwsm &> /dev/null && uwsm check may-start && uwsm select; then
 	exec systemd-cat -t uwsm_start uwsm start default
 fi
