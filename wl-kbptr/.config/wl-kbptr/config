@@ -1,0 +1,3 @@
+[mode_floating]
+source=detect
+# vim: ft=toml
