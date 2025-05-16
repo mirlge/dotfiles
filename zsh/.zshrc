@@ -97,4 +97,6 @@ command -v pypush &> /dev/null && eval "$(pypush --show-completion)"
 
 command -v arduino-cli &> /dev/null && eval "$(arduino-cli completion zsh)"
 
+command -v git-branchless &> /dev/null && alias git='git-branchless wrap --'
+
 command -v pfetch &> /dev/null && pfetch
