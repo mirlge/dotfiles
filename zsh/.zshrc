@@ -39,6 +39,7 @@ source "$shell_aliases_dir/color.sh"
 source "$shell_aliases_dir/ls.sh"
 source "$shell_aliases_dir/lsd.sh"
 source "$shell_aliases_dir/git.sh"
+unset shell_aliases_dir
 
 # manpager, editor, etc.
 if command -v nvim &> /dev/null
