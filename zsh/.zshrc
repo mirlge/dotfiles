@@ -37,7 +37,7 @@ command -v starship &> /dev/null && eval "$(starship init zsh)"
 shell_aliases_dir="$HOME/.dotfiles/_shell-aliases"
 source "$shell_aliases_dir/color.sh"
 source "$shell_aliases_dir/ls.sh"
-source "$shell_aliases_dir/lsd.sh"
+source "$shell_aliases_dir/eza.sh"
 source "$shell_aliases_dir/git.sh"
 unset shell_aliases_dir
 
