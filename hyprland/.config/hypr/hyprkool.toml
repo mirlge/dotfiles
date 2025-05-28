@@ -1,2 +1,5 @@
 activities = ["personal", "work"]
 workspaces = [9, 9]
+
+[daemon.mouse]
+switch_workspace_on_edge = false
