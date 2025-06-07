@@ -69,7 +69,9 @@ command -v zellij &> /dev/null && eval "$(zellij setup --generate-completion zsh
 # gpg signing fix
 export GPG_TTY=$TTY
 
-export TERM=xterm-256color
+if [[ "$TERM" != "linux" ]]; then
+  export TERM=xterm-256color
+fi
 
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 
