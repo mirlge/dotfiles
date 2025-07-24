@@ -38,7 +38,6 @@ shell_aliases_dir="$HOME/.dotfiles/_shell-aliases"
 source "$shell_aliases_dir/color.sh"
 source "$shell_aliases_dir/ls.sh"
 source "$shell_aliases_dir/eza.sh"
-source "$shell_aliases_dir/git.sh"
 unset shell_aliases_dir
 
 # manpager, editor, etc.
