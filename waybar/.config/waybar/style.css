@@ -1,4 +1,5 @@
 @import "rose-pine.css";
+@import 'colors.css';
 
 * {
   border: none;
@@ -6,13 +7,13 @@
   font-family: FontAwesome, JetBrainsMono Nerd Font Mono, Roboto, Helvetica, Arial, sans-serif;
   font-size: 15px;
   font-weight: normal;
-  color: @text;
 }
 
 box.horizontal > window#waybar,
 window#waybar {
   background: transparent;
   margin: 2.5px;
+  color: @on_surface
 }
 
 window#waybar {
@@ -26,7 +27,7 @@ tooltip {
 }
 
 *:hover {
-  background-color: @overlay;
+  background-color: @surface_bright;
 }
 
 menuitem {
@@ -91,12 +92,12 @@ menu {
 
 
 #custom-notifications {
-  color: @pine;
+  color: @primary;
 }
 
 
 #battery.charging {
-  color: @pine;
+  color: @primary;
 }
 
 @keyframes blink {
@@ -115,7 +116,7 @@ menu {
 }
 
 #battery.critical:not(.charging) {
-  color: @love;
+  color: @error;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -130,7 +131,8 @@ menu {
 }
 
 #workspaces button.active {
-  background-color: @pine;
+  background-color: @primary;
+  color: @on_primary;
 }
 
 #workspaces {
@@ -138,12 +140,12 @@ menu {
 }
 
 #workspaces button:hover {
-  background-color: @muted;
+  background-color: @outline;
 }
 
 #workspaces button.urgent {
   background-color: @gold;
-  color: @overlay;
+  color: @surface_bright;
 }
 
 
