@@ -103,4 +103,6 @@ command -v git-branchless &> /dev/null && alias git='git-branchless wrap --'
 
 command -v k3s &> /dev/null && eval "$(k3s completion zsh)"
 
+command -v kubectl &> /dev/null && eval "$(kubectl completion zsh)"
+
 command -v pfetch &> /dev/null && pfetch
