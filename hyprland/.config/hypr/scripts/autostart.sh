@@ -11,4 +11,4 @@ uwsm app -- avizo-service &
 hyprpm reload -n
 uwsm app -- hyprkool daemon &
 uwsm app -- batsignal &
-uwsm app -- ulauncher --no-window-shadow --hide-window --dev &
+uwsm app -- elephant &
