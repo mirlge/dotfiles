@@ -25,9 +25,6 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
-# iTerm2 shell integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # starship
@@ -39,6 +36,7 @@ source "$shell_aliases_dir/color.sh"
 source "$shell_aliases_dir/ls.sh"
 source "$shell_aliases_dir/eza.sh"
 unset shell_aliases_dir
+alias matugen-img='matugen image -t scheme-rainbow'
 
 # manpager, editor, etc.
 if command -v nvim &> /dev/null
