@@ -1,6 +1,3 @@
-[config.palette]
-type = 'scheme-rainbow'
-
 [config.wallpaper]
 command = "waypaper"
 arguments = ["--wallpaper"]
