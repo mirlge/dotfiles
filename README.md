@@ -38,4 +38,4 @@ installed system wide
 
 ### Hyprland + Waybar + Ghostty + tmux + Neovim
 
-![Hyprland + Waybar + Ghostty + tmux + Neovim](./hyprland+waybar+wezterm+tmux+nvim.png)
+![Hyprland + Waybar + Ghostty + tmux + Neovim](./hyprland+waybar+ghostty+tmux+nvim.png)
