@@ -60,9 +60,6 @@ command -v fzf &> /dev/null && source <(fzf --zsh)
 # deno completions
 command -v deno &> /dev/null && eval "$(deno completions zsh)"
 
-# zellij completions + more
-command -v zellij &> /dev/null && eval "$(zellij setup --generate-completion zsh)"
-
 # gpg signing fix
 export GPG_TTY=$TTY
 
