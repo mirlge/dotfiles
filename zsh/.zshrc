@@ -100,4 +100,7 @@ command -v k3s &> /dev/null && eval "$(k3s completion zsh)"
 
 command -v kubectl &> /dev/null && eval "$(kubectl completion zsh)"
 
+# bun completions
+[ -s "/home/tor/.bun/_bun" ] && source "/home/tor/.bun/_bun"
+
 command -v pfetch &> /dev/null && pfetch
