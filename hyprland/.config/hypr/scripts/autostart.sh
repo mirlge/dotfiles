@@ -12,3 +12,4 @@ hyprpm reload -n
 uwsm app -- hyprkool daemon &
 uwsm app -- batsignal &
 uwsm app -- elephant &
+uwsm app -- walker --gapplication-service &
