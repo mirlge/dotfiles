@@ -1,0 +1,36 @@
+font: JetBrainsMono Nerd Font Mono
+anchor: bottom-right
+menu:
+  - key: "c"
+    desc: Cursor
+    submenu:
+      - key: "c"
+        desc: wl-kbptr
+        cmd: wl-kbptr
+
+      - key: "t"
+        desc: wl-kbptr (tile)
+        cmd: wl-kbptr -o modes=tile,bisect
+
+      - key: "space"
+        desc: wl-kbptr (floating)
+        cmd: wl-kbptr -o modes=floating,bisect
+
+      - key: "b"
+        desc: wl-kbptr (bisect)
+        cmd: wl-kbptr -o modes=bisect
+
+  - key: "s"
+    desc: System
+    submenu:
+      - key: "w"
+        desc: Wi-Fi
+        cmd: iwmenu -l walker
+
+      - key: "b"
+        desc: Bluetooth
+        cmd: bzmenu -l walker
+
+      - key: "p"
+        desc: PipeWire
+        cmd: pwmenu -l custom --launcher-command "walker -dp '{hint}'"
