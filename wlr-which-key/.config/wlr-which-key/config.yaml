@@ -25,7 +25,7 @@ menu:
     submenu:
       - key: "w"
         desc: Wi-Fi
-        cmd: iwmenu -l walker
+        cmd: iwmenu -l custom --launcher-command "walker -dp '{hint}' {password_flag:-x}"
 
       - key: "b"
         desc: Bluetooth
