@@ -29,7 +29,7 @@ menu:
 
       - key: "b"
         desc: Bluetooth
-        cmd: bzmenu -l walker
+        cmd: bzmenu -l custom --launcher-command "walker -dp '{hint}'"
 
       - key: "p"
         desc: PipeWire
