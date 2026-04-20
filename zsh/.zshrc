@@ -70,7 +70,7 @@ fi
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 
 # builtin <C-w>
-export WORDCHARS=''
+export WORDCHARS='_'
 
 alias nvim-nightly="$HOME/.local/share/bob/nightly/bin/nvim"
 
