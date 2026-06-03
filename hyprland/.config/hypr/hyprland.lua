@@ -182,7 +182,6 @@ local hy3 = hl.plugin.hy3
 
 -- Application launch keybinds
 hl.bind(mainMod .. "+ return", hl.dsp.exec_cmd("uwsm app -- ghostty"))
-hl.bind(mainMod .. "+ F", hl.dsp.exec_cmd("uwsm app -- nautilus"))
 hl.bind(mainMod .. "+ B", hl.dsp.exec_cmd("uwsm app -- zen-browser"))
 hl.bind(mainMod .. "+ V", hl.dsp.exec_cmd("clipman pick --tool=rofi"))
 hl.bind(mainMod .. "+ S", hl.dsp.exec_cmd("wlr-which-key -k s"))
