@@ -1,2 +1,2 @@
-source "$HOME/.zprofile"
-source "$HOME/.zshenv"
+export HYPRCURSOR_THEME=HyprBibataModernClassicSVG
+# vim: ft=sh
