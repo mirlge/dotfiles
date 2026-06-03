@@ -1,6 +1,9 @@
 /hyprland/.config/hypr/monitors.conf
+/hyprland/.config/hypr/monitors.lua
 /hyprland/.config/hypr/workspaces.conf
+/hyprland/.config/hypr/workspaces.lua
 
 # matugen colors
 /waybar/.config/waybar/colors.css
 /hyprland/.config/hypr/colors.conf
+/hyprland/.config/hypr/colors.lua
