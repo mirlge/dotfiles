@@ -212,7 +212,13 @@ hl.bind(mainMod .. " + L", hl.dsp.layout("focus r"))
 hl.bind(mainMod .. " + bracketright", hl.dsp.focus({ monitor = "+1" }))
 hl.bind(mainMod .. " + bracketleft", hl.dsp.focus({ monitor = "-1" }))
 
-hl.bind(mainMod .. " + space", hl.dsp.window.cycle_next({ floating = not (hl.get_active_window().floating or false) }))
+hl.bind(
+  mainMod .. " + space",
+  function()
+    local floating = hl.get_active_window().floating
+    hl.dispatch(hl.dsp.window.cycle_next({ floating = floating == nil or not floating }))
+  end
+)
 
 -- Move window
 hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "l" }))
