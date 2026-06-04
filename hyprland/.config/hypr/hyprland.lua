@@ -227,6 +227,8 @@ hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "u" }))
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "r" }))
 
 hl.bind(mainMod .. " + period", hl.dsp.layout("promote"))
+hl.bind(mainMod .. " + semicolon", hl.dsp.layout("consume_or_expel prev"))
+hl.bind(mainMod .. " + apostrophe", hl.dsp.layout("consume_or_expel next"))
 
 -- Move column
 hl.bind(mainMod .. " + SHIFT + bracketleft", hl.dsp.layout("swapcol l"))
