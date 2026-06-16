@@ -148,15 +148,6 @@ animations {
         length = 24,
       },
     },
-    hyprbars = {
-      bar_precedence_over_border = true,
-      bar_part_of_window = true,
-      bar_color = colors.surface,
-      col = { text = colors.on_surface, },
-      bar_text_size = 15,
-      bar_text_font = "Adwaita Sans",
-      bar_height = 20,
-    },
   },
 })
 
