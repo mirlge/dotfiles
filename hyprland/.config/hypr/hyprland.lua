@@ -73,10 +73,6 @@ animations {
     mouse_move_enables_dpms = true,
     key_press_enables_dpms = true,
 
-    enable_swallow = true,
-    swallow_regex = "^(kitty|org.wezfurlong.wezterm|com.mitchellh.ghostty)$",
-    swallow_exception_regex = "^(wev)$",
-
     focus_on_activate = true,
   },
 
