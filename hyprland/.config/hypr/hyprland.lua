@@ -352,6 +352,17 @@ hl.bind(mainMod .. " + ALT + SHIFT + 9", hl.dsp.exec_cmd("hyprkool switch-to-act
 
 hl.bind(mainMod .. " + CTRL + space", hl.dsp.exec_cmd("hyprctl switchxkblayout keyd-virtual-keyboard next"))
 
+if hl.plugin and hl.plugin.scrolloverview then
+  hl.plugin.scrolloverview.configure({
+    wallpaper = 2,
+    blur = true,
+    shadow = {
+      enabled = true,
+    }
+  })
+  hl.bind(mainMod .. " + W", function() hl.plugin.scrolloverview.overview("toggle") end)
+end
+
 -- gestures
 hl.gesture({ fingers = 3, direction = "left", action = function() hl.exec_cmd("hyprkool move-right -c") end })
 hl.gesture({ fingers = 3, direction = "down", action = function() hl.exec_cmd("hyprkool move-up -c") end })
@@ -361,7 +372,5 @@ hl.gesture({ fingers = 3, direction = "right", action = function() hl.exec_cmd("
 hl.gesture({ fingers = 4, direction = "right", action = function() hl.exec_cmd("hyprkool prev-activity -c") end })
 hl.gesture({ fingers = 4, direction = "left", action = function() hl.exec_cmd("hyprkool next-activity -c") end })
 
---[[
-gesture = 4, up, dispatcher, overview:close
-gesture = 4, down, dispatcher, overview:open
-]]
+hl.gesture({ fingers = 4, direction = "up", action = function() hl.plugin.scrolloverview.overview("enable") end })
+hl.gesture({ fingers = 4, direction = "down", action = function() hl.plugin.scrolloverview.overview("disable") end })
