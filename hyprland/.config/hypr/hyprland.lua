@@ -48,6 +48,10 @@ hl.config({
     blur = {
       enabled = false,
     },
+
+    shadow = {
+      color = colors.shadow
+    },
   },
 
   --[[ TODO: Convert this
