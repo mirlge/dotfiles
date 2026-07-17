@@ -115,32 +115,6 @@ animations {
   },
 
   plugin = {
-    hy3 = {
-      tab_first_window = true,
-      tabs = {
-        height = 18,
-        padding = 0,
-        radius = 0,
-
-        colors = {
-          active = colors.primary,
-          active_border = colors.primary,
-          active_text = colors.on_primary,
-
-          inactive = colors.outline,
-          inactive_border = colors.outline,
-
-          active_alt_monitor = colors.source_color,
-          active_alt_monitor_border = colors.source_color,
-
-          focused = colors.source_color,
-          focused_border = colors.source_color,
-        },
-
-        text_font = "Adwaita Sans",
-        text_height = 11,
-      },
-    },
     dynamic_cursors = {
       mode = "rotate",
 
@@ -187,7 +161,6 @@ hl.permission({ binary = "/usr/bin/hyprlock", type = "screencopy", mode = "allow
 hl.permission({ binary = "/usr/bin/wl-kbptr", type = "screencopy", mode = "allow" })
 
 local mainMod = "SUPER"
-local hy3 = hl.plugin.hy3
 
 -- Application launch keybinds
 hl.bind(mainMod .. "+ return", hl.dsp.exec_cmd("uwsm app -- ghostty"))
