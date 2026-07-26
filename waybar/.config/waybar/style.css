@@ -1,4 +1,3 @@
-@import "rose-pine.css";
 @import 'colors.css';
 
 * {
@@ -13,7 +12,7 @@ box.horizontal > window#waybar,
 window#waybar {
   background: transparent;
   margin: 2.5px;
-  color: @on_surface;
+  color: @fg;
 }
 
 window#waybar {
@@ -27,8 +26,8 @@ tooltip {
 }
 
 *:hover {
-  background-color: @surface_bright;
-  color: @on_surface_bright;
+  background-color: @dim;
+  color: @fg;
 }
 
 menuitem {
@@ -83,32 +82,32 @@ menu {
 
 #wireplumber,
 #pulseaudio {
-  color: @gold;
+  color: @yellow;
 }
 
 
 #temperature {
-  color: @gold;
+  color: @yellow;
 }
 
 
 #custom-notifications {
-  color: @primary;
+  color: @accent;
 }
 
 
 #battery.charging {
-  color: @primary;
+  color: @accent;
 }
 
 @keyframes blink {
   to {
-    background-color: @text;
+    background-color: @fg;
   }
 }
 
 #battery.warning:not(.charging) {
-  color: @gold;
+  color: @yellow;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -117,7 +116,7 @@ menu {
 }
 
 #battery.critical:not(.charging) {
-  color: @error;
+  color: @red;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -131,8 +130,8 @@ menu {
 }
 
 #workspaces button.active {
-  background-color: @primary;
-  color: @on_primary;
+  background-color: @accent;
+  color: @bg;
 }
 
 #workspaces {
@@ -140,13 +139,12 @@ menu {
 }
 
 #workspaces button:hover {
-  background-color: @outline;
-  color: @on_outline;
+  background-color: @dim;
 }
 
 #workspaces button.urgent {
-  background-color: @gold;
-  color: @surface_bright;
+  background-color: @yellow;
+  color: @dim;
 }
 
 
@@ -156,5 +154,5 @@ menu {
 
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
-  background-color: @gold;
+  background-color: @yellow;
 }

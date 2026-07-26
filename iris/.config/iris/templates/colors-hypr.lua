@@ -1,0 +1,18 @@
+local M = {
+  bg = "rgb({bg.strip})",
+  fg = "rgb({fg.strip})",
+  accent = "rgb({accent.strip})",
+  surface = "rgb({surface.strip})",
+  red = "rgb({red.strip})",
+  green = "rgb({green.strip})",
+  yellow = "rgb({yellow.strip})",
+}
+
+hl.config({
+  general = {
+    ["col.active_border"] = "rgba({accent.strip}ff)",
+    ["col.inactive_border"] = "rgba({surface.strip}ff)",
+  }
+})
+
+return M

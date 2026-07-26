@@ -30,10 +30,6 @@ hl.config({
     gaps_out = 10,
 
     border_size = 2,
-    col = {
-      active_border = colors.primary,
-      inactive_border = colors.outline,
-    },
 
     layout = "scrolling",
 
@@ -47,10 +43,6 @@ hl.config({
   decoration = {
     blur = {
       enabled = false,
-    },
-
-    shadow = {
-      color = colors.shadow
     },
   },
 
@@ -84,24 +76,24 @@ animations {
     insert_after_current = false,
 
     col = {
-      border_active = colors.primary,
-      border_inactive = colors.outline,
+      border_active = colors.accent,
+      border_inactive = colors.dim,
 
-      border_locked_active = colors.error,
-      border_locked_inactive = colors.outline,
+      border_locked_active = colors.red,
+      border_locked_inactive = colors.dim,
     },
 
     groupbar = {
       font_size = 13,
-      text_color = colors.on_primary,
+      text_color = colors.fg,
       height = 20,
 
       col = {
-        active = colors.primary,
-        inactive = colors.outline,
+        active = colors.accent,
+        inactive = colors.dim,
 
-        locked_active = colors.error,
-        locked_inactive = colors.outline,
+        locked_active = colors.red,
+        locked_inactive = colors.dim,
       },
     },
   },
@@ -126,7 +118,7 @@ animations {
       bar_precedence_over_border = true,
       bar_part_of_window = true,
       bar_color = colors.surface,
-      col = { text = colors.on_surface, },
+      col = { text = colors.fg, },
       bar_text_size = 15,
       bar_text_font = "Adwaita Sans",
       bar_height = 20,
