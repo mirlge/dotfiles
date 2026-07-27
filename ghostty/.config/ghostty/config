@@ -2,3 +2,4 @@ theme = iris
 macos-option-as-alt = left
 keybind = ctrl+alt+w=toggle_tab_overview
 font-size = 11
+window-theme = ghostty
