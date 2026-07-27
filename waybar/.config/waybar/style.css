@@ -97,7 +97,7 @@ menu {
 
 
 #battery.charging {
-  color: @accent;
+  color: @green;
 }
 
 @keyframes blink {
