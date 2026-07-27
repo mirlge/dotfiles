@@ -11,7 +11,7 @@ local M = {
 hl.config({
   general = {
     ["col.active_border"] = "rgba({accent.strip}ff)",
-    ["col.inactive_border"] = "rgba({surface.strip}ff)",
+    ["col.inactive_border"] = "rgba({dim.strip}ff)",
   }
 })
 
