@@ -2,8 +2,3 @@
 /hyprland/.config/hypr/monitors.lua
 /hyprland/.config/hypr/workspaces.conf
 /hyprland/.config/hypr/workspaces.lua
-
-# colors
-/hyprland/.config/hypr/colors.conf
-/hyprland/.config/hypr/colors.lua
-/ghostty/.config/ghostty/themes/iris
