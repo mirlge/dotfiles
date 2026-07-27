@@ -1,4 +1,4 @@
-@import 'colors.css';
+@import '../../.cache/iris/colors-waybar.css';
 
 * {
   border: none;
