@@ -32,7 +32,7 @@ stop_launcher() {
 stop_all() {
   stop_polkitagent
   stop_idle
-  stop_waypaper
+  [ -z "$KEEP_WAYPAPER" ] && stop_waypaper
   stop_clipman
   stop_bar
   stop_notifications

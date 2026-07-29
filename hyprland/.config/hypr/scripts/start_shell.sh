@@ -32,7 +32,7 @@ start_launcher() {
 start_all() {
   start_polkitagent
   start_idle
-  start_waypaper
+  [ -z "$KEEP_WAYPAPER" ] && start_waypaper
   start_clipman
   start_bar
   start_notifications
