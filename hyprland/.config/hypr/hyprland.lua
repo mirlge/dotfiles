@@ -42,8 +42,8 @@ hl.config({
 
   decoration = {
     blur = {
-      size = 2,
-      passes = 3,
+      size = 3,
+      passes = 4,
     },
 
     shadow = {
