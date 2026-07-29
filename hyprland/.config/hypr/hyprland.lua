@@ -153,6 +153,7 @@ hl.bind(mainMod .. "+ B", hl.dsp.exec_cmd("uwsm app -- zen-browser"))
 hl.bind(mainMod .. "+ V", hl.dsp.exec_cmd("uwsm app -- clipman pick --tool=rofi"))
 hl.bind(mainMod .. "+ S", hl.dsp.exec_cmd("uwsm app -- wlr-which-key -k s"))
 hl.bind("PRINT", hl.dsp.exec_cmd("uwsm app -- flameshot gui"))
+hl.bind(mainMod .. "+ N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 
 -- Launcher keybinds
 hl.bind(mainMod .. "+ D", hl.dsp.exec_cmd("uwsm app -- rofi -show combi"))
