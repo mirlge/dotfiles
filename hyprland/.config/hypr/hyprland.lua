@@ -271,7 +271,7 @@ hl.define_submap("clean", function()
   hl.bind(mainMod .. " + CTRL + SHIFT + escape", hl.dsp.submap("reset"))
 end)
 
-hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("wlr-which-key -k c"))
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("uwsm app -- wlr-which-key -k c"))
 
 -- hyprkool start --
 -- Basic movement between and within activities
