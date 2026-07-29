@@ -1,0 +1,24 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "widgets": [
+    "volume",
+    "backlight",
+    "mpris",
+    "title",
+    "dnd",
+    "notifications"
+  ],
+  "widget-config": {
+    "mpris": {
+      "autohide": true
+    },
+    "backlight": {
+      "label": "",
+      "device": "amdgpu_bl1"
+    },
+    "volume": {
+      "label": "",
+      "show-per-app": true
+    }
+  }
+}

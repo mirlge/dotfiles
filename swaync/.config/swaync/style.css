@@ -1,0 +1,26 @@
+@import "../../.cache/iris/colors-waybar.css";
+
+* {
+  font-family:
+    FontAwesome,
+    JetBrainsMono Nerd Font Propo,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-size: 14px;
+}
+
+.control-center {
+  background-color: @surface;
+  color: @fg;
+  border-radius: 0;
+}
+
+.notification {
+  background-color: @surface;
+}
+
+.notification-default-action:hover {
+  background-color: @dim;
+}
