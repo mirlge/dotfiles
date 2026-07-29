@@ -155,9 +155,9 @@ hl.bind(mainMod .. "+ S", hl.dsp.exec_cmd("uwsm app -- wlr-which-key -k s"))
 hl.bind("PRINT", hl.dsp.exec_cmd("uwsm app -- flameshot gui"))
 
 -- Launcher keybinds
-hl.bind(mainMod .. "+ D", hl.dsp.exec_cmd("rofi -show combi"))
-hl.bind(mainMod .. "+ R", hl.dsp.exec_cmd("walker"))
-hl.bind(mainMod .. "+ tab", hl.dsp.exec_cmd("rofi -show window"))
+hl.bind(mainMod .. "+ D", hl.dsp.exec_cmd("uwsm app -- rofi -show combi"))
+hl.bind(mainMod .. "+ R", hl.dsp.exec_cmd("uwsm app -- walker"))
+hl.bind(mainMod .. "+ tab", hl.dsp.exec_cmd("uwsm app -- rofi -show window"))
 
 -- Window mainpulation keybinds
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
