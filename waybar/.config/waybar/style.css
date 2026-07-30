@@ -149,6 +149,10 @@ menu {
 }
 
 
+#tray separator {
+  background: @bg;
+}
+
 #tray > .passive {
   -gtk-icon-effect: dim;
 }
