@@ -282,9 +282,9 @@ if hl.plugin and hl.plugin.scrolloverview then
       enabled = true,
     }
   })
+
   hl.bind(mainMod .. " + W", function() hl.plugin.scrolloverview.overview("toggle") end)
+  hl.gesture({ fingers = 4, direction = "up", action = function() hl.plugin.scrolloverview.overview("enable") end })
+  hl.gesture({ fingers = 4, direction = "down", action = function() hl.plugin.scrolloverview.overview("disable") end })
 end
 
--- gestures
-hl.gesture({ fingers = 4, direction = "up", action = function() hl.plugin.scrolloverview.overview("enable") end })
-hl.gesture({ fingers = 4, direction = "down", action = function() hl.plugin.scrolloverview.overview("disable") end })
