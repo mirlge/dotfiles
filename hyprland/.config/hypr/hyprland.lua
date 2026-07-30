@@ -284,7 +284,7 @@ if hl.plugin and hl.plugin.scrolloverview then
   })
 
   hl.bind(mainMod .. " + W", hl.plugin.scrolloverview.overview("toggle"))
-  hl.gesture({ fingers = 4, direction = "up", action = function() hl.dispatch(hl.plugin.scrolloverview.overview("enable")) end })
-  hl.gesture({ fingers = 4, direction = "down", action = function() hl.dispatch(hl.plugin.scrolloverview.overview("disable")) end })
+  hl.gesture({ fingers = 3, direction = "up", action = function() hl.dispatch(hl.plugin.scrolloverview.overview("enable")) end })
+  hl.gesture({ fingers = 3, direction = "down", action = function() hl.dispatch(hl.plugin.scrolloverview.overview("disable")) end })
 end
 
