@@ -272,43 +272,6 @@ hl.define_submap("clean", function()
 end)
 
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("uwsm app -- wlr-which-key -k c"))
-
--- hyprkool start --
--- Basic movement between and within activities
-hl.bind(mainMod .. " + ALT + bracketright", hl.dsp.exec_cmd("hyprkool next-activity -c"))
-hl.bind(mainMod .. " + ALT + bracketleft", hl.dsp.exec_cmd("hyprkool prev-activity -c"))
-hl.bind(mainMod .. " + ALT + SHIFT + bracketright", hl.dsp.exec_cmd("hyprkool next-activity -c -w"))
-hl.bind(mainMod .. " + ALT + SHIFT + bracketleft", hl.dsp.exec_cmd("hyprkool prev-activity -c -w"))
-hl.bind(mainMod .. " + ALT + h", hl.dsp.exec_cmd("hyprkool move-left -c"))
-hl.bind(mainMod .. " + ALT + l", hl.dsp.exec_cmd("hyprkool move-right -c"))
-hl.bind(mainMod .. " + ALT + j", hl.dsp.exec_cmd("hyprkool move-down -c"))
-hl.bind(mainMod .. " + ALT + k", hl.dsp.exec_cmd("hyprkool move-up -c"))
-hl.bind(mainMod .. " + ALT + SHIFT + h", hl.dsp.exec_cmd("hyprkool move-left -cw"))
-hl.bind(mainMod .. " + ALT + SHIFT + l", hl.dsp.exec_cmd("hyprkool move-right -cw"))
-hl.bind(mainMod .. " + ALT + SHIFT + j", hl.dsp.exec_cmd("hyprkool move-down -cw"))
-hl.bind(mainMod .. " + ALT + SHIFT + k", hl.dsp.exec_cmd("hyprkool move-up -cw"))
-
--- Easy switching/moving windows between activities
-hl.bind(mainMod .. " + ALT + 1", hl.dsp.exec_cmd("hyprkool switch-to-activity -n A1"))
-hl.bind(mainMod .. " + ALT + 2", hl.dsp.exec_cmd("hyprkool switch-to-activity -n A2"))
-hl.bind(mainMod .. " + ALT + 3", hl.dsp.exec_cmd("hyprkool switch-to-activity -n A3"))
-hl.bind(mainMod .. " + ALT + 4", hl.dsp.exec_cmd("hyprkool switch-to-activity -n A4"))
-hl.bind(mainMod .. " + ALT + 5", hl.dsp.exec_cmd("hyprkool switch-to-activity -n A5"))
-hl.bind(mainMod .. " + ALT + 6", hl.dsp.exec_cmd("hyprkool switch-to-activity -n A6"))
-hl.bind(mainMod .. " + ALT + 7", hl.dsp.exec_cmd("hyprkool switch-to-activity -n A7"))
-hl.bind(mainMod .. " + ALT + 8", hl.dsp.exec_cmd("hyprkool switch-to-activity -n A8"))
-hl.bind(mainMod .. " + ALT + 9", hl.dsp.exec_cmd("hyprkool switch-to-activity -n A9"))
-hl.bind(mainMod .. " + ALT + SHIFT + 1", hl.dsp.exec_cmd("hyprkool switch-to-activity -wn A1"))
-hl.bind(mainMod .. " + ALT + SHIFT + 2", hl.dsp.exec_cmd("hyprkool switch-to-activity -wn A2"))
-hl.bind(mainMod .. " + ALT + SHIFT + 3", hl.dsp.exec_cmd("hyprkool switch-to-activity -wn A3"))
-hl.bind(mainMod .. " + ALT + SHIFT + 4", hl.dsp.exec_cmd("hyprkool switch-to-activity -wn A4"))
-hl.bind(mainMod .. " + ALT + SHIFT + 5", hl.dsp.exec_cmd("hyprkool switch-to-activity -wn A5"))
-hl.bind(mainMod .. " + ALT + SHIFT + 6", hl.dsp.exec_cmd("hyprkool switch-to-activity -wn A6"))
-hl.bind(mainMod .. " + ALT + SHIFT + 7", hl.dsp.exec_cmd("hyprkool switch-to-activity -wn A7"))
-hl.bind(mainMod .. " + ALT + SHIFT + 8", hl.dsp.exec_cmd("hyprkool switch-to-activity -wn A8"))
-hl.bind(mainMod .. " + ALT + SHIFT + 9", hl.dsp.exec_cmd("hyprkool switch-to-activity -wn A9"))
--- hyprkool end --
-
 hl.bind(mainMod .. " + CTRL + space", hl.dsp.exec_cmd("hyprctl switchxkblayout keyd-virtual-keyboard next"))
 
 if hl.plugin and hl.plugin.scrolloverview then
@@ -323,13 +286,5 @@ if hl.plugin and hl.plugin.scrolloverview then
 end
 
 -- gestures
-hl.gesture({ fingers = 3, direction = "left", action = function() hl.exec_cmd("hyprkool move-right -c") end })
-hl.gesture({ fingers = 3, direction = "down", action = function() hl.exec_cmd("hyprkool move-up -c") end })
-hl.gesture({ fingers = 3, direction = "up", action = function() hl.exec_cmd("hyprkool move-down -c") end })
-hl.gesture({ fingers = 3, direction = "right", action = function() hl.exec_cmd("hyprkool move-left -c") end })
-
-hl.gesture({ fingers = 4, direction = "right", action = function() hl.exec_cmd("hyprkool prev-activity -c") end })
-hl.gesture({ fingers = 4, direction = "left", action = function() hl.exec_cmd("hyprkool next-activity -c") end })
-
 hl.gesture({ fingers = 4, direction = "up", action = function() hl.plugin.scrolloverview.overview("enable") end })
 hl.gesture({ fingers = 4, direction = "down", action = function() hl.plugin.scrolloverview.overview("disable") end })
