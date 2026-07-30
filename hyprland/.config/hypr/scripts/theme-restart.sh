@@ -6,5 +6,5 @@ if [ -n "$error_code" ]; then
   hyprctl reload
   exit "$error_code"
 fi
-"$(dirname "$0")/restart_shell.sh"
+hyprctl dispatch "hl.dsp.exec_cmd('KEEP_WAYPAPER=\"$KEEP_WAYPAPER\" \"$(dirname "$0")/restart_shell.sh\"')"
 hyprctl reload
