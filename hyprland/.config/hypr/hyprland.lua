@@ -278,6 +278,7 @@ if hl.plugin and hl.plugin.scrolloverview then
   hl.plugin.scrolloverview.configure({
     wallpaper = 2,
     blur = true,
+    workspace_gap = 30,
     shadow = {
       enabled = true,
     }
