@@ -14,39 +14,39 @@
     "keyboard-state",
     "battery",
     "clock",
-    "custom/notifications",
+    "custom/notifications"
   ],
   // Modules configuration
   "hyprland/workspaces": {
-    "on-click": "activate",
+    "on-click": "activate"
   },
   "keyboard-state": {
     "numlock": true,
     "format": "{name} {icon}",
     "format-icons": {
       "locked": "",
-      "unlocked": "",
-    },
+      "unlocked": ""
+    }
   },
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
       "activated": "",
-      "deactivated": "",
-    },
+      "deactivated": ""
+    }
   },
   "tray": {
-    "spacing": 10,
+    "spacing": 10
   },
   "clock": {
     "format": "{0:%H:%M:%S}  {0:%Y-%m-%d}",
     "interval": 1,
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
     "states": {
       "warning": 32,
-      "critical": 30,
+      "critical": 30
     },
     "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% ",
@@ -58,7 +58,7 @@
       "",
       ""
     ],
-    "interval": 2,
+    "interval": 2
   },
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
@@ -79,9 +79,9 @@
         "",
         "",
         ""
-      ],
+      ]
     },
-    "on-click": "flatpak run com.saivert.pwvucontrol",
+    "on-click": "flatpak run com.saivert.pwvucontrol"
   },
   "custom/notifications": {
     "tooltip": false,
@@ -94,14 +94,14 @@
       "inhibited-notification": "<span foreground='red'><sup></sup></span>",
       "inhibited-none": "",
       "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": "",
+      "dnd-inhibited-none": ""
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
-    "escape": true,
+    "escape": true
   },
   "mpris": {
     "format": "{player} {status_icon}",
@@ -109,7 +109,7 @@
     "status-icons": {
       "playing": "",
       "paused": "",
-      "stopped": "",
-    },
-  },
+      "stopped": ""
+    }
+  }
 }
