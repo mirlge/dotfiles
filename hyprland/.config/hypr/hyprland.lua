@@ -141,6 +141,10 @@ hl.window_rule({
 
 hl.window_rule({ match = { class = "^(ulauncher)$" }, border_size = 0 })
 
+hl.animation({ leaf = "layersIn", enabled = true, speed = 2.5, bezier = "default" })
+hl.animation({ leaf = "layersOut", enabled = true, speed = 100, bezier = "default" })
+hl.layer_rule({ match = { namespace = "swaync-control-center" }, animation = "slide right" })
+
 hl.permission({ binary = "/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", type = "screencopy", mode = "allow" })
 hl.permission({ binary = "/usr/bin/hyprlock", type = "screencopy", mode = "allow" })
 hl.permission({ binary = "/usr/bin/wl-kbptr", type = "screencopy", mode = "allow" })
