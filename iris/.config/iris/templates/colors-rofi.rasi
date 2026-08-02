@@ -14,7 +14,7 @@
     alternate-urgent-foreground: {fg};
 
     selected-active-background: {accent};
-    selected-active-foreground: {bg};
+    selected-active-foreground: {fg};
     selected-normal-background: {dim};
     selected-normal-foreground: {fg};
     selected-urgent-background: {yellow};
