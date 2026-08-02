@@ -1,6 +1,6 @@
 * {
-    active-background: {dim};
-    active-foreground: {fg};
+    active-background: {accent};
+    active-foreground: {bg};
     normal-background: {surface};
     normal-foreground: {fg};
     urgent-background: {yellow};
