@@ -4,14 +4,14 @@
     normal-background: {surface};
     normal-foreground: {fg};
     urgent-background: {yellow};
-    urgent-foreground: {fg};
+    urgent-foreground: {bg};
 
-    alternate-active-background: {surface};
-    alternate-active-foreground: {fg};
+    alternate-active-background: {accent};
+    alternate-active-foreground: {bg};
     alternate-normal-background: {surface};
     alternate-normal-foreground: {fg};
-    alternate-urgent-background: {surface};
-    alternate-urgent-foreground: {fg};
+    alternate-urgent-background: {yellow};
+    alternate-urgent-foreground: {bg};
 
     selected-active-background: {accent};
     selected-active-foreground: {fg};
