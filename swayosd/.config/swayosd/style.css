@@ -1,0 +1,5 @@
+@import '../../.cache/iris/colors-waybar.css';
+
+window#osd {
+  background: alpha(@surface, 0.8);
+}
