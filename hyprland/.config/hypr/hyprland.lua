@@ -149,6 +149,8 @@ hl.permission({ binary = "/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland",
 hl.permission({ binary = "/usr/bin/hyprlock", type = "screencopy", mode = "allow" })
 hl.permission({ binary = "/usr/bin/wl-kbptr", type = "screencopy", mode = "allow" })
 
+hl.animation({ leaf = "workspaces", enabled = true, speed = 8, bezier = "default", style = "slidevert" })
+
 local mainMod = "SUPER"
 
 -- Application launch keybinds
