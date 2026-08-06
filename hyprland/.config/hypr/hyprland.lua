@@ -224,9 +224,21 @@ hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = "10" }))
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
--- special workspace
+-- special workspaces
 hl.bind(mainMod .. " + M", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.window.move({ workspace = "special:magic" }))
+---Create toggle and move to special workspace keybinds
+---@param key string|integer
+local function special_ws(key)
+  hl.bind(mainMod .. " + ALT + " .. key, hl.dsp.workspace.toggle_special(key))
+  hl.bind(mainMod .. " + ALT + SHIFT + " .. key, hl.dsp.window.move({ workspace = "special:" .. key }))
+end
+for i = 0, 9 do
+  special_ws(i)
+end
+for _, key in ipairs({ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "grave", "less", "comma", "period", "slash", "equal", "minus", "backslash", "bracketleft", "bracketright", "apostrophe", "semicolon" }) do
+  special_ws(key)
+end
 
 -- volume buttons
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --output-volume raise"))
