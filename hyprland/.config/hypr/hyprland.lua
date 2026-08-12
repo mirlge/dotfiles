@@ -175,6 +175,7 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pin())
 -- Compositor keybinds
 hl.bind(mainMod .. " + CTRL + Q", hl.dsp.exec_cmd("uwsm stop"))
 hl.bind(mainMod .. " + CTRL + L", hl.dsp.exec_cmd("loginctl lock-session"))
+hl.bind(mainMod .. " + CTRL + R", hl.dsp.exec_cmd("wlr-which-key -k r"))
 
 -- Move focus with mainMod + [hjkl]
 hl.bind(mainMod .. " + H", hl.dsp.layout("focus l"))
