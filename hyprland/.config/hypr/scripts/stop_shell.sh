@@ -21,9 +21,6 @@ stop_osd() {
   killall swayosd-server
   killall avizo-service
 }
-stop_hyprkool() {
-  killall hyprkool
-}
 stop_launcher() {
   killall elephant
   killall walker
@@ -37,7 +34,6 @@ stop_all() {
   stop_bar
   stop_notifications
   stop_osd
-  stop_hyprkool
   stop_batsignal
   stop_launcher
 }

@@ -21,9 +21,6 @@ start_osd() {
   uwsm app -- swayosd-server &
   uwsm app -- avizo-service &
 }
-start_hyprkool() {
-  uwsm app -- hyprkool daemon &
-}
 start_launcher() {
   uwsm app -- elephant &
   uwsm app -- walker --gapplication-service &
@@ -37,7 +34,6 @@ start_all() {
   start_bar
   start_notifications
   start_osd
-  start_hyprkool
   start_batsignal
   start_launcher
 }
