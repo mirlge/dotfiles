@@ -34,3 +34,46 @@ menu:
       - key: "p"
         desc: PipeWire
         cmd: pwmenu -l custom --launcher-command "walker -dp '{hint}'"
+
+  - key: "r"
+    desc: Restart shell
+    submenu:
+      - key: "a"
+        desc: Restart entire shell
+        cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh")'
+
+      - key: "b"
+        desc: Bar
+        cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh bar")'
+
+      - key: "n"
+        desc: Notification daemon
+        cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh notifications")'
+
+      - key: "o"
+        desc: On-screen display
+        cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh osd")'
+
+      - key: "l"
+        desc: Launcher daemon
+        cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh launcher")'
+
+      - key: "c"
+        desc: Clipboard manager
+        cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh launcher")'
+
+      - key: "i"
+        desc: Idle daemon
+        cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh idle")'
+
+      - key: "p"
+        desc: Polkit agent
+        cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh polkitagent")'
+
+      - key: "w"
+        desc: Wallpaper daemon (Waypaper)
+        cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh waypaper")'
+
+      - key: "B"
+        desc: Batsignal
+        cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh batsignal")'
