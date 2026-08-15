@@ -21,6 +21,9 @@ stop_osd() {
   killall swayosd-server
   killall avizo-service
 }
+stop_batsignal() {
+  systemctl --user stop batsignal.service
+}
 stop_launcher() {
   killall elephant
   killall walker

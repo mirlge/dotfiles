@@ -21,6 +21,9 @@ start_osd() {
   uwsm app -- swayosd-server &
   uwsm app -- avizo-service &
 }
+start_batsignal() {
+  systemctl --user start batsignal.service
+}
 start_launcher() {
   uwsm app -- elephant &
   uwsm app -- walker --gapplication-service &
