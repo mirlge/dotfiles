@@ -1,8 +1,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-local theme_plugin = wezterm.plugin.require("https://github.com/neapsix/wezterm")
-config.colors = theme_plugin.main.colors()
+config.color_scheme = "iris"
 
 config.font_size = 12
 config.adjust_window_size_when_changing_font_size = false
