@@ -248,7 +248,6 @@ hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("swayosd-client --output-volume 
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("swayosd-client --output-volume mute-toggle"))
 hl.bind("ALT + XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --input-volume raise"))
 hl.bind("ALT + XF86AudioLowerVolume", hl.dsp.exec_cmd("swayosd-client --input-volume lower"))
-hl.bind("ALT + XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"))
 hl.bind("ALT + XF86AudioMute", hl.dsp.exec_cmd("swayosd-client --input-volume mute-toggle"))
 
 -- brightness buttons
