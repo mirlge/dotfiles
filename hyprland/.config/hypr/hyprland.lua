@@ -106,6 +106,8 @@ hl.config({
       rotate = {
         length = 24,
       },
+
+      shake = { effects = true },
     },
     hyprbars = {
       bar_precedence_over_border = true,
