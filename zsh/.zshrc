@@ -103,6 +103,6 @@ command -v kubectl &> /dev/null && eval "$(kubectl completion zsh)"
 # bun completions
 [ -s "/home/tor/.bun/_bun" ] && source "/home/tor/.bun/_bun"
 
-command -v atuin &> /dev/null && eval "$(atuin init zsh)"
+command -v atuin &> /dev/null && eval "$(atuin init --disable-up-arrow zsh)"
 
 command -v pfetch &> /dev/null && pfetch
