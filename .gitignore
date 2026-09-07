@@ -2,3 +2,5 @@
 /hyprland/.config/hypr/monitors.lua
 /hyprland/.config/hypr/workspaces.conf
 /hyprland/.config/hypr/workspaces.lua
+
+/quickshell/.config/quickshell/mirge/.qmlls.ini
