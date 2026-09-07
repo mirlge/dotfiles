@@ -41,4 +41,4 @@ stop_all() {
   stop_launcher
 }
 
-eval "stop_${*:-all}"
+eval "stop_${1:-all}"

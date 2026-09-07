@@ -37,4 +37,4 @@ start_all() {
   start_launcher
 }
 
-eval "start_${*:-all}"
+eval "start_${1:-all}"
