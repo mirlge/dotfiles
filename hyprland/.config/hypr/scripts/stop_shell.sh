@@ -11,11 +11,8 @@ stop_waypaper() {
 stop_clipman() {
   killall wl-paste
 }
-stop_bar() {
-  killall waybar
-}
-stop_notifications() {
-  killall swaync
+stop_quickshell() {
+  [ "$1" = '-f' ] && qs -c mirge kill
 }
 stop_osd() {
   killall swayosd-server
@@ -34,8 +31,7 @@ stop_all() {
   stop_idle
   [ -z "$KEEP_WAYPAPER" ] && stop_waypaper
   stop_clipman
-  stop_bar
-  stop_notifications
+  stop_quickshell "$2"
   stop_osd
   stop_batsignal
   stop_launcher
