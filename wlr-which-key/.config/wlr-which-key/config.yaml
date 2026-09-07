@@ -42,13 +42,9 @@ menu:
         desc: Restart entire shell
         cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh")'
 
-      - key: "b"
-        desc: Bar
-        cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh bar")'
-
-      - key: "n"
-        desc: Notification daemon
-        cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh notifications")'
+      - key: "q"
+        desc: Quickshell
+        cmd: hyprctl dispatch 'hl.dsp.exec_cmd("~/.config/hypr/scripts/restart_shell.sh quickshell")'
 
       - key: "o"
         desc: On-screen display
