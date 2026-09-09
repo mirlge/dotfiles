@@ -9,7 +9,7 @@ InteractiveRectangle {
   id: root
   visible: Mpris.players.values.length > 0
   onClicked: {
-    if (player.canTogglePlaying) player.togglePlaying()
+    if (player?.canTogglePlaying) player.togglePlaying()
   }
 
   property MprisPlayer player: visible ? Mpris.players.values.find(p => p) : null
