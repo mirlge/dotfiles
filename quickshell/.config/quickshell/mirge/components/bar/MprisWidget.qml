@@ -30,5 +30,26 @@ InteractiveRectangle {
       text: root.player?.isPlaying ? "󰏤" : "󰐊"
       variant: "Propo"
     }
+
+    Tooltip {
+      anchor {
+        window: bar
+        item: root
+      }
+      hovered: root.containsMouse
+
+      RowLayout {
+        IconImage {
+          implicitSize: tooltipTitle.implicitHeight < 50 ? 50 : tooltipTitle.implicitHeight
+          source: root.player?.trackArtUrl || ""
+          visible: source !== ""
+        }
+
+        StyledText {
+          id: tooltipTitle
+          text: root.player?.trackTitle + " – " + root.player?.trackArtist || ""
+        }
+      }
+    }
   }
 }
