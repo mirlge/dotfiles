@@ -42,8 +42,6 @@ Rectangle {
       onClicked: m => {
         if (m.button === Qt.LeftButton && card.defaultAction) card.defaultAction.invoke()
         else card.dismiss()
-        console.log(card.index)
-        console.log(card.notif)
       }
 
       RowLayout {
