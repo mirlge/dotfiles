@@ -12,7 +12,7 @@ start_clipman() {
   wl-paste -t text --watch "$(dirname "$0")/clipman-keepassxc.sh" &
 }
 start_quickshell() {
-  uwsm app -- qs -nc mirge
+  uwsm app -- qs -nc mirge &
 }
 start_osd() {
   uwsm app -- swayosd-server &
