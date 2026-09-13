@@ -35,6 +35,6 @@ ColumnLayout {
   Repeater {
     model: NotificationService.history
 
-    NotificationCard {}
+    NotificationCard { showExpired: true }
   }
 }

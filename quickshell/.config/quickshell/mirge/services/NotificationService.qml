@@ -15,12 +15,11 @@ Singleton {
     bodyMarkupSupported: true
     imageSupported: true
     onNotification: n => {
-      if (!n.transient) {
-        history.insert(0, {
-          notification: n,
-          time: Qt.formatDateTime(new Date(), "HH:mm"),
-        })
-      }
+      history.insert(0, {
+        notification: n,
+        time: Qt.formatDateTime(new Date(), "HH:mm"),
+        expired: false
+      })
 
       n.tracked = true
     }

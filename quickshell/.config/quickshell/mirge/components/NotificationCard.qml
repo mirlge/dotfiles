@@ -1,3 +1,4 @@
+import Quickshell
 import Quickshell.Widgets
 import Quickshell.Services.Notifications
 import QtQuick
@@ -12,24 +13,26 @@ Rectangle {
   color: Theme.surface
   border.width: 1
   border.color: critical ? Theme.red : Theme.dim
+  visible: showExpired || !modelData.expired
 
   required property var modelData
   required property int index
-  property Notification notif: modelData.notification || modelData
+  property Notification notif: modelData.notification
   property bool critical: notif.urgency === NotificationUrgency.Critical
   property NotificationAction defaultAction: notif.actions.length > 0 ? notif.actions.find(a => a.identifier === "default") : null
   property real lastActionIdx: notif.actions.indexOf(defaultAction) === notif.actions.length - 1 ? notif.actions.length - 2 : notif.actions.length - 1
   property real firstActionIdx: notif.actions.indexOf(defaultAction) === 0 ? 1 : 0
-
-  function dismiss() {
-    if (card.index < 0) card.notif.dismiss()
-    else NotificationService.history.remove(card.index)
-  }
+  property bool showExpired: false
 
   Timer {
     interval: card.notif.expireTimeout > 0 ? card.notif.expireTimeout * 1000 : 5000
-    running: !card.critical && card.notif.expireTimeout >= 0
-    onTriggered: card.notif.expire()
+    running: !card.showExpired && !card.critical && card.notif.expireTimeout >= 0
+    onTriggered: {
+      if (card.notif.transient) {
+        card.notif.expire()
+        NotificationService.history.remove(card.index)
+      } else card.modelData.expired = true
+    }
   }
 
   ColumnLayout {
@@ -41,7 +44,8 @@ Rectangle {
       acceptedButtons: Qt.LeftButton | Qt.MiddleButton
       onClicked: m => {
         if (m.button === Qt.LeftButton && card.defaultAction) card.defaultAction.invoke()
-        else card.dismiss()
+        else card.notif.dismiss()
+        NotificationService.history.remove(card.index)
       }
 
       RowLayout {
@@ -79,7 +83,7 @@ Rectangle {
           }
 
           StyledText {
-            visible: card.index >= 0
+            visible: card.showExpired
             color: Theme.dim
             text: card.notif.appName || ""
           }
@@ -88,13 +92,16 @@ Rectangle {
         StyledText {
           Layout.alignment: Qt.AlignTop
           color: Theme.dim
-          text: card.modelData.time || ""
-          visible: text !== ""
+          text: card.modelData.time
+          visible: card.showExpired
         }
 
         WrapperMouseArea {
           Layout.alignment: Qt.AlignTop
-          onClicked: card.dismiss()
+          onClicked: {
+            card.notif.dismiss()
+            NotificationService.history.remove(card.index)
+          }
 
           StyledText {
             color: Theme.dim
@@ -137,7 +144,10 @@ Rectangle {
             id: actionMouse
             anchors.fill: parent
             hoverEnabled: true
-            onClicked: parent.modelData.invoke()
+            onClicked: {
+              parent.modelData.invoke()
+              NotificationService.history.remove(card.index)
+            }
           }
         }
       }

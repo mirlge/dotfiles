@@ -7,7 +7,7 @@ InteractiveRectangle {
   id: root
   onClicked: controls.visible = !controls.visible
 
-  readonly property int count: NotificationService.history.count
+  readonly property int count: NotificationService.trackedNotifications.values.filter(n => !n.transient).length
   readonly property string icon: count > 0 ? "󱅫" : "󰂜"
   readonly property color computedColor: count > 0 ? Theme.accent : Theme.fg
 

@@ -25,9 +25,9 @@ Variants {
       spacing: 10
 
       Repeater {
-        model: NotificationService.trackedNotifications
+        model: NotificationService.history
 
-        NotificationCard { index: -1 }
+        NotificationCard {}
       }
     }
   }

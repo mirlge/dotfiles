@@ -20,8 +20,8 @@ PanelWindow {
   WlrLayershell.layer: WlrLayer.Overlay
   onVisibleChanged: {
     if (visible) {
-      for (const n of NotificationService.trackedNotifications.values) {
-        if (n.actions.length === 0) n.expire()
+      for (let i = 0; i < NotificationService.history.count; i++) {
+        NotificationService.history.get(i).expired = true
       }
     }
   }
