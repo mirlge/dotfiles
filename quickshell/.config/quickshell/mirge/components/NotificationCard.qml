@@ -59,7 +59,7 @@ Rectangle {
         IconImage {
           implicitSize: 36
           Layout.alignment: Qt.AlignCenter
-          visible: source.toString() !== ""
+          visible: status === Image.Ready
           source: card.notif.image || card.notif.appIcon || ""
         }
 
