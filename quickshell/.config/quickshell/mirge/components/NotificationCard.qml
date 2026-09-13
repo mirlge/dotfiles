@@ -60,7 +60,7 @@ Rectangle {
           implicitSize: 36
           Layout.alignment: Qt.AlignCenter
           visible: status === Image.Ready
-          source: card.notif.image || card.notif.appIcon || ""
+          source: card.notif.image || Quickshell.iconPath(card.notif.appIcon, true) || ""
         }
 
         ColumnLayout {
