@@ -1,4 +1,5 @@
 import Quickshell
+import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
 import qs.services
@@ -16,6 +17,7 @@ Variants {
     color: "transparent"
     exclusionMode: ExclusionMode.Ignore
     screen: modelData
+    WlrLayershell.layer: WlrLayer.Overlay
 
     required property var modelData
 
