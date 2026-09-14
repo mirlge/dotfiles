@@ -9,8 +9,15 @@ ColumnLayout {
   spacing: 10
   onControlsVisibleChanged: {
     if (controlsVisible) {
-      for (let i = 0; i < NotificationService.history.count; i++) {
-        NotificationService.history.get(i).expired = true
+      for (let i = 0, removed = 0; i - removed < NotificationService.history.count; i++) {
+        let new_i = i - removed
+        let n = NotificationService.history.get(new_i)
+
+        if (n.notification.transient) {
+          n.notification.dismiss()
+          NotificationService.history.remove(new_i)
+          removed++
+        } else n.expired = true
       }
     }
   }
