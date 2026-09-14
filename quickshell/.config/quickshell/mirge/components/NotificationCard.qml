@@ -31,7 +31,7 @@ Rectangle {
       if (card.notif.transient) {
         card.notif.expire()
         NotificationService.history.remove(card.index)
-      } else card.modelData.expired = true
+      } else NotificationService.history.setProperty(card.index, "expired", true)
     }
   }
 
