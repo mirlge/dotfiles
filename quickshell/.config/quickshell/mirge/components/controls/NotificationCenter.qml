@@ -21,7 +21,12 @@ ColumnLayout {
 
     InteractiveRectangle {
       visible: NotificationService.history.count > 0
-      onClicked: NotificationService.history.clear()
+      onClicked: {
+        while (NotificationService.history.count > 0) {
+          NotificationService.history.get(0).notification.dismiss()
+          NotificationService.history.remove(0)
+        }
+      }
 
       StyledText {
         color: Theme.red
