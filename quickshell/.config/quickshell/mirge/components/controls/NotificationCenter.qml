@@ -7,6 +7,15 @@ ColumnLayout {
   id: column
   Layout.fillWidth: true
   spacing: 10
+  onControlsVisibleChanged: {
+    if (controlsVisible) {
+      for (let i = 0; i < NotificationService.history.count; i++) {
+        NotificationService.history.get(i).expired = true
+      }
+    }
+  }
+
+  readonly property bool controlsVisible: controls.visible
 
   RowLayout {
     Layout.fillWidth: true

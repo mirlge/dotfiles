@@ -18,13 +18,6 @@ PanelWindow {
   color: "transparent"
   exclusionMode: ExclusionMode.Ignore
   WlrLayershell.layer: WlrLayer.Overlay
-  onVisibleChanged: {
-    if (visible) {
-      for (let i = 0; i < NotificationService.history.count; i++) {
-        NotificationService.history.get(i).expired = true
-      }
-    }
-  }
 
   Rectangle {
     anchors.fill: parent
