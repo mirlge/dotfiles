@@ -26,7 +26,7 @@ Rectangle {
 
   Timer {
     interval: card.notif.expireTimeout < 0 ? 5000 : card.notif.expireTimeout * 1000
-    running: !card.showExpired && !card.critical && card.notif.expireTimeout !== 0
+    running: !card.showExpired && card.visible && !card.critical && card.notif.expireTimeout !== 0
     onTriggered: {
       if (card.notif.transient) {
         card.notif.expire()
