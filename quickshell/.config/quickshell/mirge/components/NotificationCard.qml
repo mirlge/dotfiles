@@ -24,13 +24,19 @@ Rectangle {
   property real firstActionIdx: notif.actions.indexOf(defaultAction) === 0 ? 1 : 0
   property bool showExpired: false
 
+  Connections {
+    target: card.notif
+    function onClosed(_) {
+      NotificationService.history.remove(card.index)
+    }
+  }
+
   Timer {
     interval: card.notif.expireTimeout < 0 ? 5000 : card.notif.expireTimeout * 1000
     running: !card.showExpired && card.visible && !card.critical && card.notif.expireTimeout !== 0
     onTriggered: {
       if (card.notif.transient) {
         card.notif.expire()
-        NotificationService.history.remove(card.index)
       } else NotificationService.history.setProperty(card.index, "expired", true)
     }
   }
@@ -45,7 +51,6 @@ Rectangle {
       onClicked: m => {
         if (m.button === Qt.LeftButton && card.defaultAction) card.defaultAction.invoke()
         else card.notif.dismiss()
-        NotificationService.history.remove(card.index)
       }
 
       RowLayout {
@@ -100,7 +105,6 @@ Rectangle {
           Layout.alignment: Qt.AlignTop
           onClicked: {
             card.notif.dismiss()
-            NotificationService.history.remove(card.index)
           }
 
           StyledText {
@@ -146,7 +150,6 @@ Rectangle {
             hoverEnabled: true
             onClicked: {
               parent.modelData.invoke()
-              NotificationService.history.remove(card.index)
             }
           }
         }

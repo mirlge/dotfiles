@@ -40,7 +40,6 @@ ColumnLayout {
       onClicked: {
         while (NotificationService.history.count > 0) {
           NotificationService.history.get(0).notification.dismiss()
-          NotificationService.history.remove(0)
         }
       }
 
