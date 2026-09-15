@@ -14,7 +14,6 @@ RowLayout {
 
     WrapperMouseArea {
       id: root
-      //onClicked: modelData.display(bar, x, y)
       acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
       onClicked: (mouse) => {
         if (mouse.button === Qt.LeftButton) {
