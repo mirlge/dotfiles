@@ -22,7 +22,7 @@ RowLayout {
 
       implicitWidth: 36
       implicitHeight: bar.implicitHeight
-      visible: ws.id > 0 && ws.monitor.name === bar.screen.name
+      visible: ws.id > 0 && ws.monitor === Hyprland.monitorFor(bar.screen)
 
       Rectangle {
         color: wsButton.containsMouse ? Theme.dim : wsButton.isActive
