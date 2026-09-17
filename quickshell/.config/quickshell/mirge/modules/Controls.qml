@@ -9,11 +9,12 @@ import qs.components.controls
 PanelWindow {
   id: root
   anchors {
+    top: true
     bottom: true
     right: true
   }
+  margins.top: Config.barHeight
   implicitWidth: 380
-  implicitHeight: screen.height - Config.barHeight
   visible: false
   color: "transparent"
   exclusionMode: ExclusionMode.Ignore
