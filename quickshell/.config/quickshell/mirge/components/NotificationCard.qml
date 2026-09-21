@@ -77,6 +77,7 @@ Rectangle {
             color: card.critical ? Theme.red : Theme.accent
             elide: Text.ElideRight
             text: card.notif.summary
+            wrapMode: Text.WordWrap
             font.bold: true
           }
 
