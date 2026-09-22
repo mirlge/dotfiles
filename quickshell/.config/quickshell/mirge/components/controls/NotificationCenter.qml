@@ -18,7 +18,6 @@ ColumnLayout {
 
           if (n.notification.transient) {
             n.notification.dismiss()
-            NotificationService.history.remove(new_i)
             removed++
           } else n.expired = true
         }
