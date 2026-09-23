@@ -27,6 +27,10 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
+check_command() {
+  command -v "$@" &> /dev/null
+}
+
 # starship
 command -v starship &> /dev/null && eval "$(starship init zsh)"
 
@@ -106,3 +110,5 @@ command -v kubectl &> /dev/null && eval "$(kubectl completion zsh)"
 command -v atuin &> /dev/null && eval "$(atuin init --disable-up-arrow zsh)"
 
 command -v pfetch &> /dev/null && pfetch
+
+unset -f check_command
