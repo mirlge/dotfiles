@@ -32,7 +32,7 @@ check_command() {
 }
 
 # starship
-command -v starship &> /dev/null && eval "$(starship init zsh)"
+check_command starship && eval "$(starship init zsh)"
 
 # shell aliases
 shell_aliases_dir="$HOME/.dotfiles/_shell-aliases"
@@ -43,7 +43,7 @@ unset shell_aliases_dir
 alias matugen-img='matugen image -t scheme-rainbow'
 
 # manpager, editor, etc.
-if command -v nvim &> /dev/null
+if check_command nvim
 then
   export MANPAGER="nvim +Man!"
   export VISUAL="nvim"
@@ -59,10 +59,10 @@ export FZF_DEFAULT_OPTS="
   --color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 
 # set up fzf key bindings and fuzzy completion
-command -v fzf &> /dev/null && source <(fzf --zsh)
+#check_command fzf && source <(fzf --zsh)
 
 # deno completions
-command -v deno &> /dev/null && eval "$(deno completions zsh)"
+check_command deno && eval "$(deno completions zsh)"
 
 # gpg signing fix
 export GPG_TTY=$TTY
@@ -80,35 +80,35 @@ alias nvim-nightly="$HOME/.local/share/bob/nightly/bin/nvim"
 
 alias hx="PATH=\"$HOME/.local/share/nvim/mason/bin:$PATH\" hx"
 
-command -v pkgx &> /dev/null && eval "$(pkgx dev --shellcode)"  # https://github.com/pkgxdev/dev
+check_command pkgx && eval "$(pkgx dev --shellcode)"  # https://github.com/pkgxdev/dev
 
 [ -f "$HOME/.pkgxd" ] && source "$HOME/.pkgxd"
 
 [ -f "/Users/mirge/.ghcup/env" ] && source "/Users/mirge/.ghcup/env" # ghcup-env
 
-command -v sunbeam &> /dev/null && source <(sunbeam completion zsh)
+check_command sunbeam && source <(sunbeam completion zsh)
 
-command -v luarocks &> /dev/null && eval "$(luarocks path --bin)"
+check_command luarocks && eval "$(luarocks path --bin)"
 
-command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
+check_command zoxide && eval "$(zoxide init zsh)"
 
-command -v direnv &> /dev/null && eval "$(direnv hook zsh)"
+check_command direnv && eval "$(direnv hook zsh)"
 
-command -v pypush &> /dev/null && eval "$(pypush --show-completion)"
+check_command pypush && eval "$(pypush --show-completion)"
 
-command -v arduino-cli &> /dev/null && eval "$(arduino-cli completion zsh)"
+check_command arduino-cli && eval "$(arduino-cli completion zsh)"
 
-command -v git-branchless &> /dev/null && function git() { git-branchless wrap -- "$@" }
+check_command git-branchless && function git() { git-branchless wrap -- "$@" }
 
-command -v k3s &> /dev/null && eval "$(k3s completion zsh)"
+check_command k3s && eval "$(k3s completion zsh)"
 
-command -v kubectl &> /dev/null && eval "$(kubectl completion zsh)"
+check_command kubectl && eval "$(kubectl completion zsh)"
 
 # bun completions
 [ -s "/home/tor/.bun/_bun" ] && source "/home/tor/.bun/_bun"
 
-command -v atuin &> /dev/null && eval "$(atuin init --disable-up-arrow zsh)"
+check_command atuin && eval "$(atuin init --disable-up-arrow zsh)"
 
-command -v pfetch &> /dev/null && pfetch
+check_command pfetch && pfetch
 
 unset -f check_command
