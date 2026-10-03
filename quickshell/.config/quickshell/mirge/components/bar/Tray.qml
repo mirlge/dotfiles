@@ -30,7 +30,7 @@ RowLayout {
       required property SystemTrayItem modelData
 
       WrapperRectangle {
-        color: root.containsMouse ? (root.modelData.status === Status.NeedsAttention ? Theme.yellow : Theme.dim) : "transparent"
+        color: root.containsMouse ? Theme.dim : (root.modelData.status === Status.NeedsAttention ? Theme.yellow : "transparent")
         implicitHeight: bar.implicitHeight
 
         IconImage {
