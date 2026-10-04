@@ -45,6 +45,7 @@ RowLayout {
         anchor {
           window: bar
           item: root
+          margins.top: bar.implicitHeight
         }
         menu: root.modelData.menu
       }
