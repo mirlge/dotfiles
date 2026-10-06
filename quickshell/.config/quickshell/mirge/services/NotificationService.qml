@@ -3,6 +3,7 @@ import Quickshell
 import Quickshell.Services.Notifications
 import QtQuick
 import QtQml.Models
+import qs.services
 
 Singleton {
   property alias trackedNotifications: server.trackedNotifications
@@ -18,7 +19,7 @@ Singleton {
       history.insert(0, {
         notification: n,
         time: Qt.formatDateTime(new Date(), "HH:mm"),
-        expired: false
+        expired: Config.controlsOpen
       })
 
       n.tracked = true
