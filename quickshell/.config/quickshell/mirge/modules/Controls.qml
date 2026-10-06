@@ -15,7 +15,7 @@ PanelWindow {
   }
   margins.top: Config.barHeight
   implicitWidth: 380
-  visible: false
+  visible: Config.controlsOpen
   color: "transparent"
   exclusionMode: ExclusionMode.Ignore
   WlrLayershell.layer: WlrLayer.Overlay
@@ -39,8 +39,8 @@ PanelWindow {
 
   IpcHandler {
     target: "controls"
-    function toggle(): void { root.visible = !root.visible }
-    function show(): void { root.visible = true }
-    function hide(): void { root.visible = false }
+    function toggle(): void { Config.controlsOpen = !root.visible }
+    function show(): void { Config.controlsOpen = true }
+    function hide(): void { Config.controlsOpen = false }
   }
 }

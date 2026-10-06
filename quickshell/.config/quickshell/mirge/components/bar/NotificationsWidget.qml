@@ -5,7 +5,7 @@ import qs.components
 
 InteractiveRectangle {
   id: root
-  onClicked: controls.visible = !controls.visible
+  onClicked: Config.controlsOpen = !controls.visible
 
   readonly property int count: NotificationService.trackedNotifications.values.filter(n => !n.transient).length
   readonly property string icon: count > 0 ? "󱅫" : "󰂜"
