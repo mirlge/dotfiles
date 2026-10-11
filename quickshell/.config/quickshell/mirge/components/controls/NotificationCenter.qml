@@ -7,20 +7,16 @@ ColumnLayout {
   id: column
   Layout.fillWidth: true
   spacing: 10
+  onVisibleChanged: {
+    if (visible) {
+      for (let i = 0, removed = 0; i - removed < NotificationService.history.count; i++) {
+        let new_i = i - removed
+        let n = NotificationService.history.get(new_i)
 
-  Connections {
-    target: controls
-    function onVisibleChanged() {
-      if (visible) {
-        for (let i = 0, removed = 0; i - removed < NotificationService.history.count; i++) {
-          let new_i = i - removed
-          let n = NotificationService.history.get(new_i)
-
-          if (n.notification.transient) {
-            n.notification.dismiss()
-            removed++
-          } else n.expired = true
-        }
+        if (n.notification.transient) {
+          n.notification.dismiss()
+          removed++
+        } else n.expired = true
       }
     }
   }
