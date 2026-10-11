@@ -15,6 +15,13 @@ ColumnLayout {
       onVisibleChanged: { if (visible) root.modelData.positionChanged() }
       required property MprisPlayer modelData
 
+      function positionFormat(seconds) {
+        let hours = Math.floor(seconds / 3600)
+        let format = (hours === 0 ? "" : "HH:") + "mm:ss"
+        let date = new Date(2026, 0, 1, 0, 0, seconds)
+        return Qt.formatTime(date, format)
+      }
+
       IconImage {
         implicitSize: column.implicitHeight
         source: root.modelData.trackArtUrl || ""
@@ -33,7 +40,7 @@ ColumnLayout {
         }
 
         StyledText {
-          text: Math.floor(root.modelData.position) + "/" + Math.floor(root.modelData.length)
+          text: root.positionFormat(root.modelData.position) + "/" + root.positionFormat(root.modelData.length)
           visible: root.modelData.canSeek && root.modelData.positionSupported
 
           Timer {
