@@ -12,6 +12,7 @@ ColumnLayout {
     RowLayout {
       id: root
       spacing: 10
+      onVisibleChanged: { if (visible) root.modelData.positionChanged() }
       required property MprisPlayer modelData
 
       IconImage {
