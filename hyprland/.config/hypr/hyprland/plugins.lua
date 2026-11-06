@@ -32,6 +32,13 @@ if hl.plugin then
         },
       },
     })
+
+    hl.window_rule({
+      name = "inactive-hyprbars",
+      match = { focus = false },
+      ["hyprbars:bar_color"] = colors.bg,
+      ["hyprbars:title_color"] = colors.surface,
+    })
   end
 
   if hl.plugin.scrolloverview then

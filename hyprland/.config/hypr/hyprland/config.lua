@@ -36,7 +36,10 @@ hl.config({
 
     shadow = {
       range = 20,
-    }
+    },
+
+    dim_inactive = true,
+    dim_strength = 0.25,
   },
 
   master = {
