@@ -25,7 +25,7 @@ if hl.plugin then
           bar_precedence_over_border = true,
           bar_part_of_window = true,
           bar_color = colors.surface,
-          col = { text = colors.fg, },
+          col = { text = colors.dim },
           bar_text_size = 15,
           bar_text_font = "Adwaita Sans",
           bar_height = 20,
