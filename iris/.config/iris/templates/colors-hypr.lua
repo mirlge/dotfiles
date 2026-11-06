@@ -3,6 +3,7 @@ local M = {
   fg = "rgb({fg.strip})",
   accent = "rgb({accent.strip})",
   surface = "rgb({surface.strip})",
+  dim = "rgb({dim.strip})",
   red = "rgb({red.strip})",
   green = "rgb({green.strip})",
   yellow = "rgb({yellow.strip})",
