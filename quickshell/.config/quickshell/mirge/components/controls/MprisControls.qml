@@ -40,6 +40,7 @@ ColumnLayout {
         }
 
         StyledText {
+          color: root.modelData.isPlaying ? Theme.fg : Theme.dim
           text: root.positionFormat(root.modelData.position) + "/" + root.positionFormat(root.modelData.length)
           visible: root.modelData.canSeek && root.modelData.positionSupported
 
