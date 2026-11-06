@@ -10,6 +10,7 @@ InteractiveRectangle {
 
   StyledText {
     verticalAlignment: Text.AlignVCenter
+    color: root.active || root.containsMouse ? Theme.fg : Theme.dim
     text: root.active ? "󰅶" : "󰾫"
     variant: "Propo"
   }

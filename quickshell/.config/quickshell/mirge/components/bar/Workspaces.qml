@@ -33,7 +33,7 @@ RowLayout {
           id: label
           anchors.centerIn: parent
           text: wsButton.ws.id
-          color: wsButton.isActive ? Theme.bg : wsButton.isActiveOnMonitor ? Theme.accent : Theme.fg
+          color: wsButton.isActive ? Theme.bg : wsButton.isActiveOnMonitor ? Theme.accent : wsButton.containsMouse ? Theme.fg : Theme.dim
         }
       }
 

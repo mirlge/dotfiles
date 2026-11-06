@@ -15,7 +15,7 @@ RowLayout {
   readonly property color computedColor: root.charging ? Theme.green
       : root.level < Config.batteryCritical ? Theme.red
       : root.level <= Config.batteryWarning ? Theme.yellow
-      : Theme.fg
+      : Theme.dim
 
   readonly property string icon: {
     if (charging) {

@@ -10,7 +10,7 @@ WrapperItem {
     spacing: 7
     anchors.centerIn: parent
 
-    property color computedColor: PipewireService.muted ? Theme.fg : Theme.yellow
+    property color computedColor: PipewireService.muted ? Theme.dim : Theme.yellow
 
     StyledText {
       text: PipewireService.ready ? PipewireService.vol + "%" : "–"
