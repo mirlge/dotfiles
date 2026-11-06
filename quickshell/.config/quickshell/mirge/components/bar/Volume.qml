@@ -10,14 +10,16 @@ WrapperItem {
     spacing: 7
     anchors.centerIn: parent
 
+    property color computedColor: PipewireService.muted ? Theme.fg : Theme.yellow
+
     StyledText {
       text: PipewireService.ready ? PipewireService.vol + "%" : "–"
-      color: PipewireService.muted ? Theme.fg : Theme.yellow
+      color: root.computedColor
     }
 
     StyledText {
       text: PipewireService.icon
-      color: PipewireService.muted ? Theme.fg : Theme.yellow
+      color: root.computedColor
       variant: "Propo"
     }
   }
