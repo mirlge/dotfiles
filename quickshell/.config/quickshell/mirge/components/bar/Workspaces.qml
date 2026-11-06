@@ -19,6 +19,7 @@ RowLayout {
 
       property var ws: modelData
       property bool isActive: ws.focused
+      property bool isActiveOnMonitor: ws.active
 
       implicitWidth: 36
       implicitHeight: bar.implicitHeight
@@ -32,7 +33,7 @@ RowLayout {
           id: label
           anchors.centerIn: parent
           text: wsButton.ws.id
-          color: wsButton.isActive ? Theme.bg : Theme.fg
+          color: wsButton.isActive ? Theme.bg : wsButton.isActiveOnMonitor ? Theme.accent : Theme.fg
         }
       }
 
