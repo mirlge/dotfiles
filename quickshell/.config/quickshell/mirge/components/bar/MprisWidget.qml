@@ -13,7 +13,12 @@ InteractiveRectangle {
   }
 
   property MprisPlayer player: visible ? Mpris.players.values.find(p => p) : null
-  readonly property color computedColor: player?.isPlaying ? Theme.green : Theme.fg
+  readonly property bool isPlaying: player?.isPlaying
+  readonly property color computedColor: isPlaying ? Theme.green : Theme.fg
+  readonly property string playerName: player?.identity
+  readonly property string title: player?.trackTitle
+  readonly property string artURL: player?.trackArtUrl
+  readonly property string artist: player?.trackArtist
 
   rect.implicitHeight: bar.implicitHeight
 
@@ -23,12 +28,12 @@ InteractiveRectangle {
 
     StyledText {
       color: root.computedColor
-      text: root.player?.identity || root.player?.trackTitle || ""
+      text: root.playerName || root.title || ""
     }
 
     StyledText {
       color: root.computedColor
-      text: root.player?.isPlaying ? "󰏤" : "󰐊"
+      text: root.isPlaying ? "󰏤" : "󰐊"
       variant: "Propo"
     }
 
@@ -43,13 +48,13 @@ InteractiveRectangle {
       RowLayout {
         IconImage {
           implicitSize: tooltipTitle.implicitHeight < 50 ? 50 : tooltipTitle.implicitHeight
-          source: root.player?.trackArtUrl || ""
+          source: root.artURL || ""
           visible: source !== ""
         }
 
         StyledText {
           id: tooltipTitle
-          text: root.player?.trackTitle + " – " + root.player?.trackArtist || ""
+          text: root.title + " – " + root.artist || ""
         }
       }
     }
