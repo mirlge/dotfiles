@@ -17,12 +17,23 @@ Rectangle {
 
   required property var modelData
   required property int index
+  property bool showExpired: false
+  property var time: modelData.time
+
   property Notification notif: modelData.notification
   property bool critical: notif.urgency === NotificationUrgency.Critical
   property NotificationAction defaultAction: notif.actions.length > 0 ? notif.actions.find(a => a.identifier === "default") : null
   property real lastActionIdx: notif.actions.indexOf(defaultAction) === notif.actions.length - 1 ? notif.actions.length - 2 : notif.actions.length - 1
   property real firstActionIdx: notif.actions.indexOf(defaultAction) === 0 ? 1 : 0
-  property bool showExpired: false
+
+  property real expireTimeout: notif.expireTimeout < 0 ? 5000 : notif.expireTimeout * 1000
+  property bool isTransient: notif.transient
+
+  property string imagePath: notif.image
+  property string iconName: notif.appIcon
+  property string summary: notif.summary
+  property string body: notif.body
+  property string appName: notif.appName
 
   Connections {
     target: card.notif
@@ -32,10 +43,10 @@ Rectangle {
   }
 
   Timer {
-    interval: card.notif.expireTimeout < 0 ? 5000 : card.notif.expireTimeout * 1000
-    running: !card.showExpired && card.visible && !card.critical && card.notif.expireTimeout !== 0
+    interval: card.expireTimeout
+    running: !card.showExpired && card.visible && !card.critical && card.expireTimeout !== 0
     onTriggered: {
-      if (card.notif.transient) {
+      if (card.isTransient) {
         card.notif.expire()
       } else NotificationService.history.setProperty(card.index, "expired", true)
     }
@@ -65,7 +76,7 @@ Rectangle {
           implicitSize: 36
           Layout.alignment: Qt.AlignCenter
           visible: status === Image.Ready
-          source: card.notif.image || Quickshell.iconPath(card.notif.appIcon, true) || ""
+          source: card.imagePath || Quickshell.iconPath(card.iconName, true) || ""
         }
 
         ColumnLayout {
@@ -76,7 +87,7 @@ Rectangle {
             Layout.fillWidth: true
             color: card.critical ? Theme.red : Theme.accent
             elide: Text.ElideRight
-            text: card.notif.summary
+            text: card.summary
             wrapMode: Text.WordWrap
             font.bold: true
           }
@@ -85,20 +96,20 @@ Rectangle {
             Layout.fillWidth: true
             visible: text !== ""
             wrapMode: Text.WordWrap
-            text: card.notif.body
+            text: card.body
           }
 
           StyledText {
             visible: card.showExpired
             color: Theme.dim
-            text: card.notif.appName || ""
+            text: card.appName || ""
           }
         }
 
         StyledText {
           Layout.alignment: Qt.AlignTop
           color: Theme.dim
-          text: card.modelData.time
+          text: card.time
           visible: card.showExpired
         }
 
