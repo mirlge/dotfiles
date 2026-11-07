@@ -28,14 +28,21 @@ RowLayout {
       hoverEnabled: true
 
       required property SystemTrayItem modelData
+      readonly property var status: modelData.status
+      readonly property var menu: modelData.menu
+
+      readonly property string iconPath: modelData.icon
+      readonly property string tooltipTitle: modelData.tooltipTitle
+      readonly property string title: modelData.title
+      readonly property string tooltipDescription: modelData.tooltipDescription
 
       WrapperRectangle {
-        color: root.containsMouse ? Theme.dim : (root.modelData.status === Status.NeedsAttention ? Theme.yellow : "transparent")
+        color: root.containsMouse ? Theme.dim : (root.status === Status.NeedsAttention ? Theme.yellow : "transparent")
         implicitHeight: bar.implicitHeight
 
         IconImage {
           anchors.centerIn: parent
-          source: root.modelData.icon
+          source: root.iconPath
           implicitSize: bar.implicitHeight * 0.6
         }
       }
@@ -47,7 +54,7 @@ RowLayout {
           item: root
           margins.top: bar.implicitHeight
         }
-        menu: root.modelData.menu
+        menu: root.menu
       }
 
       Tooltip {
@@ -61,13 +68,13 @@ RowLayout {
         ColumnLayout {
           StyledText {
             color: Theme.accent
-            text: root.modelData.tooltipTitle || root.modelData.title
+            text: root.tooltipTitle || root.title
             visible: text !== ""
             font.bold: true
           }
 
           StyledText {
-            text: root.modelData.tooltipDescription || ""
+            text: root.tooltipDescription || ""
             visible: text !== ""
           }
         }
