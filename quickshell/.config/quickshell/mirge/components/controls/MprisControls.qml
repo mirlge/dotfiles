@@ -13,7 +13,23 @@ ColumnLayout {
       id: root
       spacing: 10
       onVisibleChanged: { if (visible) root.modelData.positionChanged() }
+
       required property MprisPlayer modelData
+      readonly property string artURL: modelData.trackArtUrl
+      readonly property string title: modelData.trackTitle
+      readonly property string playerName: modelData.identity
+
+      readonly property bool isPlaying: modelData.isPlaying
+      readonly property bool canSeek: modelData.canSeek
+      readonly property bool canControl: modelData.canControl
+      readonly property bool canGoPrevious: modelData.canGoPrevious
+      readonly property bool canGoNext: modelData.canGoNext
+      readonly property bool canTogglePlaying: modelData.canTogglePlaying
+      readonly property bool positionSupported: modelData.positionSupported
+
+      readonly property real position: modelData.position
+      readonly property real length: modelData.length
+      readonly property var playState: modelData.playbackState
 
       function positionFormat(seconds) {
         let hours = Math.floor(seconds / 3600)
@@ -24,7 +40,7 @@ ColumnLayout {
 
       IconImage {
         implicitSize: column.implicitHeight
-        source: root.modelData.trackArtUrl || ""
+        source: root.artURL || ""
         visible: source !== ""
       }
 
@@ -35,17 +51,17 @@ ColumnLayout {
           color: Theme.accent
           Layout.fillWidth: true
           wrapMode: Text.WordWrap
-          text: root.modelData.trackTitle || root.modelData.identity
+          text: root.title || root.playerName
           font.bold: true
         }
 
         StyledText {
-          color: root.modelData.isPlaying ? Theme.fg : Theme.dim
-          text: root.positionFormat(root.modelData.position) + "/" + root.positionFormat(root.modelData.length)
-          visible: root.modelData.canSeek && root.modelData.positionSupported
+          color: root.isPlaying ? Theme.fg : Theme.dim
+          text: root.positionFormat(root.position) + "/" + root.positionFormat(root.length)
+          visible: root.canSeek && root.positionSupported
 
           Timer {
-            running: parent.visible && root.modelData.playbackState === MprisPlaybackState.Playing
+            running: parent.visible && root.playState === MprisPlaybackState.Playing
             interval: 1000
             repeat: true
             onTriggered: root.modelData.positionChanged()
@@ -55,7 +71,7 @@ ColumnLayout {
         RowLayout {
           InteractiveRectangle {
             onClicked: root.modelData.previous()
-            visible: root.modelData.canGoPrevious
+            visible: root.canGoPrevious
             rect.leftMargin: 5
             rect.rightMargin: 5
 
@@ -68,20 +84,20 @@ ColumnLayout {
 
           InteractiveRectangle {
             onClicked: root.modelData.togglePlaying()
-            visible: root.modelData.canTogglePlaying
+            visible: root.canTogglePlaying
             rect.leftMargin: 5
             rect.rightMargin: 5
 
             StyledText {
               anchors.centerIn: parent
-              text: root.modelData.isPlaying ? "󰏤" : "󰐊"
+              text: root.isPlaying ? "󰏤" : "󰐊"
               variant: "Propo"
             }
           }
 
           InteractiveRectangle {
             onClicked: root.modelData.stop()
-            visible: root.modelData.canControl && root.modelData.playbackState !== MprisPlaybackState.Stopped
+            visible: root.canControl && root.playState !== MprisPlaybackState.Stopped
             rect.leftMargin: 5
             rect.rightMargin: 5
 
@@ -94,7 +110,7 @@ ColumnLayout {
 
           InteractiveRectangle {
             onClicked: root.modelData.next()
-            visible: root.modelData.canGoNext
+            visible: root.canGoNext
             rect.leftMargin: 5
             rect.rightMargin: 5
 
