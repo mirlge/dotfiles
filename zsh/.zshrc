@@ -40,7 +40,7 @@ source "$shell_aliases_dir/color.sh"
 source "$shell_aliases_dir/ls.sh"
 check_command eza && source "$shell_aliases_dir/eza.sh"
 unset shell_aliases_dir
-alias matugen-img='matugen image -t scheme-rainbow'
+alias iris-img='iris --compat wal --dark 1'
 
 # manpager, editor, etc.
 if check_command nvim
