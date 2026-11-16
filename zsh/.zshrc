@@ -38,7 +38,7 @@ check_command starship && eval "$(starship init zsh)"
 shell_aliases_dir="$HOME/.dotfiles/_shell-aliases"
 source "$shell_aliases_dir/color.sh"
 source "$shell_aliases_dir/ls.sh"
-source "$shell_aliases_dir/eza.sh"
+check_command eza && source "$shell_aliases_dir/eza.sh"
 unset shell_aliases_dir
 alias matugen-img='matugen image -t scheme-rainbow'
 
