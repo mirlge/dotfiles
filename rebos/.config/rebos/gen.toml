@@ -1,0 +1,148 @@
+# --------------------- #
+#    Generation File    #
+# --------------------- #
+
+# Other generation files to import. (Example: intensive_apps -> ~/.config/rebos/imports/intensive_apps.toml)
+imports = [
+  "chaotic_aur",
+]
+
+# Packages to be installed via Arch Linux's pacman.
+[managers.pacman]
+items = [
+  "base-devel",
+  "git",
+  "git-branchless",
+  "flatpak",
+  "limine",
+  "apparmor",
+  "usbguard",
+  "uwsm",
+  "keyd",
+
+  "bluez",
+  "bluez-utils",
+  "blueman",
+
+  "wireplumber",
+  "pipewire-audio",
+  "pipewire-pulse",
+  "pipewire-alsa",
+  "pipewire-jack",
+
+  "hyprland",
+  "hyprpm",
+  "hyprpolkitagent",
+  "hypridle",
+  "hyprlock",
+  "hyprpicker",
+
+  "xdg-desktop-portal-hyprland",
+  "xdg-desktop-portal-gtk",
+  "xdg-user-dirs",
+
+  "awww",
+  "quickshell",
+  "upower",
+  "swayosd",
+  "rofi",
+  "wl-clipboard",
+  "batsignal",
+  "flameshot",
+  "playerctl",
+  "nwg-displays",
+  "ttf-jetbrains-mono-nerd",
+  "ttf-nerd-fonts-symbols-mono",
+  "noto-fonts",
+  "noto-fonts-cjk",
+  "noto-fonts-emoji",
+  "ghostty",
+  "ghostty-nautilus",
+  "nautilus",
+
+  "networkmanager",
+  "network-manager-applet",
+  "nm-connection-editor",
+
+  "zsh",
+  "eza",
+  "starship",
+  "tmux",
+  "bat",
+  "zoxide",
+  "pfetch-rs",
+
+  "neovim",
+  "fd",
+  "ripgrep",
+  "luarocks",
+  "tree-sitter-cli",
+  "npm",
+  "go",
+
+  "adw-gtk-theme",
+  "qt5ct",
+  "qt6ct",
+  "breeze",
+  "breeze5",
+
+  "udiskie",
+  "gammastep",
+  "nwg-look",
+  "archlinux-contrib",
+  "reflector",
+  "aria2",
+  "curl",
+  "wget",
+  "gnome-online-accounts-gtk",
+  "btop",
+  "nvtop",
+  "oo7",
+  "gcr-4",
+  "libnotify",
+  "xorg-xeyes",
+]
+
+# Packages to be installed from the AUR
+[managers.aur]
+items = [
+  "iris-colors",
+  "bzmenu",
+  "iwmenu",
+  "pwmenu-git",
+  "kora-icon-theme",
+  "elephant-all",
+  "walker-bin",
+  "waypaper",
+  "wl-kbptr",
+  "wlr-which-key",
+  "avizo",
+  "sesh-bin",
+  "bemoji",
+]
+
+# Packages to be installed via Flatpak.
+[managers.flatpak]
+items = [
+  "com.github.tchx84.Flatseal",
+  "io.github.kolunmi.Bazaar",
+  "it.mijorus.gearlever",
+  "io.github.arijanj.Mimic",
+  "io.github.flattool.Ignition",
+  "org.localsend.localsend_app",
+]
+
+# Hyprland plugin repos to be installed via hyprpm.
+[managers.hyprpm_repo]
+items = [
+  "https://github.com/hyprwm/hyprland-plugins",
+  "https://github.com/virtcode/hypr-dynamic-cursors",
+  "https://github.com/yayuuu/hyprland-scroll-overview"
+]
+# Hyprland plugins to be enabled via hyprpm.
+[managers.hyprpm_plugin]
+items = [
+  "hyprbars",
+  "scrolloverview",
+  "dynamic-cursors",
+]

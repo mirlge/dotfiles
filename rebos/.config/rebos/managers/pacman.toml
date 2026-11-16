@@ -1,0 +1,10 @@
+add = "run0 pacman -S --needed #:?"
+remove = "run0 pacman -Rcs #:?"
+upgrade = "run0 pacman -Syu"
+
+plural_name = "pacman"
+
+hook_name = "pacman" # This is used in hooks. (Example: post_pacman_add)
+
+[config]
+many_args = true

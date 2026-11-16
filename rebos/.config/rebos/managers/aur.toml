@@ -1,0 +1,11 @@
+add = "paru -Sa --needed #:?"
+remove = "paru -Rcs #:?"
+sync = "paru -Say"
+upgrade = "paru -Sua"
+
+plural_name = "aur"
+
+hook_name = "aur" # This is used in hooks. (Example: post_aur_add)
+
+[config]
+many_args = true

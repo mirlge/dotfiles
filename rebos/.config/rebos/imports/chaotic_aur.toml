@@ -1,0 +1,15 @@
+# --------------------- #
+# Chaotic AUR Packages  #
+# --------------------- #
+
+# Packages to be installed via Arch Linux's pacman.
+[managers.pacman]
+items = [
+  "bibata-cursor-theme",
+  "paru",
+  "ttf-ms-fonts",
+  "limine-mkinitcpio-hook",
+  "limine-snapper-sync",
+  "xdg-desktop-portal-luminous",
+  "clipman",
+]

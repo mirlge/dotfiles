@@ -1,0 +1,11 @@
+add = "hyprpm add #:? || exit 0"
+remove = "hyprpm remove $(sed -e 's/^.*\\///' -e 's/\\.git$//' <<< #:?)"
+sync = "hyprpm reload -n"
+upgrade = "hyprpm update -n"
+
+plural_name = "hyprpm_repos"
+
+hook_name = "hyprpm_repo" # This is used in hooks. (Example: post_hyprpm_repo_add)
+
+[config]
+many_args = false
