@@ -1,0 +1,16 @@
+color={bg}
+bs-hl-color={red}
+caps-lock-bs-hl-color={red}
+caps-lock-key-hl-color={red}
+inside-color={surface}
+ring-color={surface}
+inside-clear-color={yellow}
+ring-clear-color={yellow}
+inside-ver-color={accent}
+ring-ver-color={accent}
+inside-wrong-color={red}
+ring-wrong-color={red}
+key-hl-color={accent}
+layout-bg-color={surface}
+text-color={fg}
+line-color={bg}

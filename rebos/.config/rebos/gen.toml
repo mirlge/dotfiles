@@ -34,6 +34,7 @@ items = [
   "hypridle",
 
   "niri",
+  "swaylock",
   "xdg-desktop-portal-gtk",
   "xdg-desktop-portal-gnome",
   "xdg-user-dirs",
