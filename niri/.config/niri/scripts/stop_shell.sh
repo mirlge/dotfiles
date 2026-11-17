@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-stop_polkit() {
+stop_polkitagent() {
   systemctl --user stop plasma-polkit-agent.service
 }
 stop_idle() {
