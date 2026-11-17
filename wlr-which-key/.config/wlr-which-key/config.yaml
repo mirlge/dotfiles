@@ -40,36 +40,36 @@ menu:
     submenu:
       - key: "a"
         desc: Restart entire shell
-        cmd: niri msg action -- ~/.config/niri/scripts/restart_shell.sh
+        cmd: niri msg action spawn -- ~/.config/niri/scripts/restart_shell.sh
 
       - key: "q"
         desc: Quickshell
-        cmd: niri msg action -- ~/.config/niri/scripts/restart_shell.sh quickshell
+        cmd: niri msg action spawn -- ~/.config/niri/scripts/restart_shell.sh quickshell
 
       - key: "o"
         desc: On-screen display
-        cmd: niri msg action -- ~/.config/niri/scripts/restart_shell.sh osd
+        cmd: niri msg action spawn -- ~/.config/niri/scripts/restart_shell.sh osd
 
       - key: "l"
         desc: Launcher daemon
-        cmd: niri msg action -- ~/.config/niri/scripts/restart_shell.sh launcher
+        cmd: niri msg action spawn -- ~/.config/niri/scripts/restart_shell.sh launcher
 
       - key: "c"
         desc: Clipboard manager
-        cmd: niri msg action -- ~/.config/niri/scripts/restart_shell.sh launcher
+        cmd: niri msg action spawn -- ~/.config/niri/scripts/restart_shell.sh launcher
 
       - key: "i"
         desc: Idle daemon
-        cmd: niri msg action -- ~/.config/niri/scripts/restart_shell.sh idle
+        cmd: niri msg action spawn -- ~/.config/niri/scripts/restart_shell.sh idle
 
       - key: "p"
         desc: Polkit agent
-        cmd: niri msg action -- ~/.config/niri/scripts/restart_shell.sh polkitagent
+        cmd: niri msg action spawn -- ~/.config/niri/scripts/restart_shell.sh polkitagent
 
       - key: "w"
         desc: Wallpaper daemon (Waypaper)
-        cmd: niri msg action -- ~/.config/niri/scripts/restart_shell.sh waypaper
+        cmd: niri msg action spawn -- ~/.config/niri/scripts/restart_shell.sh waypaper
 
       - key: "B"
         desc: Batsignal
-        cmd: niri msg action -- ~/.config/niri/scripts/restart_shell.sh batsignal
+        cmd: niri msg action spawn -- ~/.config/niri/scripts/restart_shell.sh batsignal
