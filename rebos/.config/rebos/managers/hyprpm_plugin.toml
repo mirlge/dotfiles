@@ -1,9 +1,0 @@
-add = "hyprpm enable #:?"
-remove = "hyprpm disable #:?"
-
-plural_name = "hyprpm_plugins"
-
-hook_name = "hyprpm_plugin" # This is used in hooks. (Example: post_hyprpm_plugin_add)
-
-[config]
-many_args = false

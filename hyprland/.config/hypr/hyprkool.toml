@@ -1,5 +1,0 @@
-activities = ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9"]
-workspaces = [9, 9]
-
-[daemon.mouse]
-switch_workspace_on_edge = false

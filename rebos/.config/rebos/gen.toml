@@ -30,15 +30,10 @@ items = [
   "pipewire-alsa",
   "pipewire-jack",
 
-  "hyprland",
-  "hyprpm",
   "hyprpolkitagent",
   "hypridle",
-  "hyprlock",
-  "hyprpicker",
 
   "niri",
-  "xdg-desktop-portal-hyprland",
   "xdg-desktop-portal-gtk",
   "xdg-desktop-portal-gnome",
   "xdg-user-dirs",
@@ -118,7 +113,6 @@ items = [
   "waypaper",
   "wl-kbptr",
   "wlr-which-key",
-  "avizo",
   "sesh-bin",
   "bemoji",
   "qml-niri",
@@ -133,19 +127,4 @@ items = [
   "io.github.arijanj.Mimic",
   "io.github.flattool.Ignition",
   "org.localsend.localsend_app",
-]
-
-# Hyprland plugin repos to be installed via hyprpm.
-[managers.hyprpm_repo]
-items = [
-  "https://github.com/hyprwm/hyprland-plugins",
-  "https://github.com/virtcode/hypr-dynamic-cursors",
-  "https://github.com/yayuuu/hyprland-scroll-overview"
-]
-# Hyprland plugins to be enabled via hyprpm.
-[managers.hyprpm_plugin]
-items = [
-  "hyprbars",
-  "scrolloverview",
-  "dynamic-cursors",
 ]
