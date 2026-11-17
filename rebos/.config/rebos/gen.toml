@@ -30,7 +30,6 @@ items = [
   "pipewire-alsa",
   "pipewire-jack",
 
-  "hypridle",
   "niri",
   "swaylock",
   "swayidle",

@@ -3,7 +3,7 @@ stop_polkitagent() {
   systemctl --user stop plasma-polkit-agent.service
 }
 stop_idle() {
-  killall hypridle
+  killall swayidle
 }
 stop_waypaper() {
   killall hyprpaper swaybg

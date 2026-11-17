@@ -3,7 +3,7 @@ start_polkitagent() {
   systemctl --user start plasma-polkit-agent.service
 }
 start_idle() {
-  uwsm app -- hypridle &
+  uwsm app -- swayidle -w &
 }
 start_waypaper() {
   uwsm app -- waypaper --restore --no-post-command &
