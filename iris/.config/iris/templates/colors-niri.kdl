@@ -1,6 +1,5 @@
 layout {
   background-color "{bg}"
-  fullscreen-backdrop-color "{bg}"
 
   focus-ring {
     active-color "{accent}"
