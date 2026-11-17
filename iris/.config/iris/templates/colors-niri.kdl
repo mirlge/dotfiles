@@ -1,0 +1,14 @@
+layout {
+  background-color "{bg}"
+  fullscreen-backdrop-color "{bg}"
+
+  focus-ring {
+    active-color "{accent}"
+    inactive-color "{dim}"
+    urgent-color "{yellow}"
+  }
+
+  insert-hint {
+    color "{accent}80"
+  }
+}

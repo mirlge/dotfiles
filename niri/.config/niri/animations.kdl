@@ -1,0 +1,8 @@
+animations {
+    workspace-switch {
+        spring stiffness=250 damping-ratio=1.0 epsilon=0.0001
+    }
+    horizontal-view-movement {
+        spring stiffness=250 damping-ratio=1.0 epsilon=0.0001
+    }
+}

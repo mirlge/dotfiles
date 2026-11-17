@@ -1,0 +1,49 @@
+spawn-sh-at-startup "~/.config/niri/scripts/autostart.sh"
+
+input {
+    keyboard {
+        xkb {
+            layout "us,se"
+            variant "altgr-weur,"
+        }
+
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    warp-mouse-to-focus
+    focus-follows-mouse
+}
+
+layout {
+    gaps 10
+
+    focus-ring {
+        width 2
+    }
+
+    shadow {
+        on
+    }
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+blur {
+  passes 4
+  offset 3.0
+}
+
+include "animations.kdl"
+include "windowrules.kdl"
+include "binds.kdl"
+include "colors.kdl"

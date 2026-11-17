@@ -37,8 +37,10 @@ items = [
   "hyprlock",
   "hyprpicker",
 
+  "niri",
   "xdg-desktop-portal-hyprland",
   "xdg-desktop-portal-gtk",
+  "xdg-desktop-portal-gnome",
   "xdg-user-dirs",
 
   "awww",
@@ -119,6 +121,7 @@ items = [
   "avizo",
   "sesh-bin",
   "bemoji",
+  "qml-niri",
 ]
 
 # Packages to be installed via Flatpak.
