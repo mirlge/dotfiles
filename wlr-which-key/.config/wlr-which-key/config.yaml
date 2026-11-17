@@ -56,7 +56,7 @@ menu:
 
       - key: "c"
         desc: Clipboard manager
-        cmd: niri msg action spawn -- ~/.config/niri/scripts/restart_shell.sh launcher
+        cmd: niri msg action spawn -- ~/.config/niri/scripts/restart_shell.sh clipman
 
       - key: "i"
         desc: Idle daemon
