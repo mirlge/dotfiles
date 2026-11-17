@@ -1,5 +1,4 @@
 import Quickshell.Widgets
-import Quickshell.Hyprland
 import QtQuick
 import QtQuick.Layouts
 import qs.services
@@ -9,21 +8,21 @@ RowLayout {
   spacing: 0
 
   Repeater {
-    model: Hyprland.workspaces
+    model: NiriService.workspaces
 
     WrapperMouseArea {
-      onClicked: Hyprland.dispatch("hl.dsp.focus({ workspace = " + wsButton.ws.id + " })")
+      onClicked: NiriService.focusWorkspaceById(ws.id)
       id: wsButton
       hoverEnabled: true
       required property var modelData
 
       property var ws: modelData
-      property bool isActive: ws.focused
-      property bool isActiveOnMonitor: ws.active
+      property bool isActive: ws.isFocused
+      property bool isActiveOnMonitor: ws.isActive
 
       implicitWidth: 36
       implicitHeight: bar.implicitHeight
-      visible: ws.id > 0 && ws.monitor === Hyprland.monitorFor(bar.screen)
+      visible: ws.output === bar.screen.name
 
       Rectangle {
         color: wsButton.containsMouse ? Theme.dim : wsButton.isActive
@@ -32,7 +31,7 @@ RowLayout {
         StyledText {
           id: label
           anchors.centerIn: parent
-          text: wsButton.ws.id
+          text: wsButton.ws.index
           color: wsButton.isActive ? Theme.bg : wsButton.isActiveOnMonitor ? Theme.accent : wsButton.containsMouse ? Theme.fg : Theme.dim
         }
       }
