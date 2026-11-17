@@ -33,6 +33,7 @@ items = [
   "hypridle",
   "niri",
   "swaylock",
+  "swayidle",
   "polkit-kde-agent",
 
   "xdg-desktop-portal-gtk",

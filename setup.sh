@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-stow zsh kitty nvim helix rofi waybar tmux wezterm ghostty meteor wl-kbptr kakoune vim wlr-which-key iris swaync walker swayosd batsignal quickshell rebos niri swaylock
+stow zsh kitty nvim helix rofi waybar tmux wezterm ghostty meteor wl-kbptr kakoune vim wlr-which-key iris swaync walker swayosd batsignal quickshell rebos niri swaylock swayidle
