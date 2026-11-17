@@ -16,7 +16,6 @@ start_quickshell() {
 }
 start_osd() {
   uwsm app -- swayosd-server &
-  uwsm app -- avizo-service &
 }
 start_batsignal() {
   systemctl --user start batsignal.service

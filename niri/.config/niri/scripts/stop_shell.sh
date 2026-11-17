@@ -16,7 +16,6 @@ stop_quickshell() {
 }
 stop_osd() {
   killall swayosd-server
-  killall avizo-service
 }
 stop_batsignal() {
   systemctl --user stop batsignal.service
