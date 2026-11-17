@@ -30,11 +30,11 @@ items = [
   "pipewire-alsa",
   "pipewire-jack",
 
-  "hyprpolkitagent",
   "hypridle",
-
   "niri",
   "swaylock",
+  "polkit-kde-agent",
+
   "xdg-desktop-portal-gtk",
   "xdg-desktop-portal-gnome",
   "xdg-user-dirs",

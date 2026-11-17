@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 start_polkitagent() {
-  systemctl --user start hyprpolkitagent.service
+  systemctl --user start plasma-polkit-agent.service
 }
 start_idle() {
   uwsm app -- hypridle &

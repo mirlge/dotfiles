@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 stop_polkit() {
-  systemctl --user stop hyprpolkitagent.service
+  systemctl --user stop plasma-polkit-agent.service
 }
 stop_idle() {
   killall hypridle
