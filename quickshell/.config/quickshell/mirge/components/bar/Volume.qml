@@ -11,6 +11,7 @@ WrapperItem {
     anchors.centerIn: parent
 
     property color computedColor: PipewireService.muted ? Theme.dim : Theme.yellow
+    property color computedSourceColor: PipewireService.sourceMuted ? Theme.dim : Theme.yellow
 
     StyledText {
       text: PipewireService.ready ? PipewireService.vol + "%" : "–"
@@ -20,6 +21,17 @@ WrapperItem {
     StyledText {
       text: PipewireService.icon
       color: root.computedColor
+      variant: "Propo"
+    }
+
+    StyledText {
+      text: PipewireService.sourceReady ? PipewireService.sourceVol + "%" : "–"
+      color: root.computedSourceColor
+    }
+
+    StyledText {
+      text: PipewireService.sourceIcon
+      color: root.computedSourceColor
       variant: "Propo"
     }
   }
