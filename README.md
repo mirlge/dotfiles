@@ -18,6 +18,6 @@ Run `unsetup.sh`
 
 ## Screenshots
 
-### Hyprland + Quickshell + Ghostty + tmux + Neovim
+### niri + Quickshell + Ghostty + tmux + Neovim
 
-![Hyprland + Quickshell + Ghostty + tmux + Neovim](./hyprland+quickshell+ghostty+tmux+nvim.png)
+![niri + Quickshell + Ghostty + tmux + Neovim](./niri+quickshell+ghostty+tmux+nvim.png)
