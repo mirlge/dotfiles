@@ -10,7 +10,6 @@ items = [
   "ttf-ms-fonts",
   "limine-mkinitcpio-hook",
   "limine-snapper-sync",
-  "xdg-desktop-portal-luminous",
   "clipman",
   "wlogout",
 ]

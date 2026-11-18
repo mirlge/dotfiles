@@ -46,7 +46,6 @@ items = [
   "rofi",
   "wl-clipboard",
   "batsignal",
-  "flameshot",
   "playerctl",
   "nwg-displays",
   "ttf-jetbrains-mono-nerd",
